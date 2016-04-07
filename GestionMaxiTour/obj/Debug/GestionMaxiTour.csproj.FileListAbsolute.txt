@@ -1,0 +1,6 @@
+C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\MaxiTour\GestionMaxiTour\bin\Debug\GestionMaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v2.1\GestionMaxiTour\bin\Debug\GestionMaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\GestionMaxiTour\obj\Debug\GestionMaxiTour.csprojResolveAssemblyReference.cache
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormCamion.resources
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\GestionMaxiTour\obj\Debug\GestionMaxiTour.Properties.Resources.resources
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\GestionMaxiTour\obj\Debug\GestionMaxiTour.csproj.GenerateResource.Cache
