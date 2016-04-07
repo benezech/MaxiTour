@@ -1,0 +1,10 @@
+c:\users\gael\documents\visual studio 2015\Projects\MaxiTour\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour_vErik\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour_v1.2\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour_v1.3\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v1.3\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v2.2\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\MaxiTour\bin\Debug\MaxiTour.exe.config
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\MaxiTour\obj\Debug\MaxiTour.csprojResolveAssemblyReference.cache
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\MaxiTour\obj\Debug\MaxiTour.Properties.Resources.resources
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour_v3.0\MaxiTour\obj\Debug\MaxiTour.csproj.GenerateResource.Cache
