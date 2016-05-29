@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Dirigeant : Personne
+    public class Dirigeant : Personne
     {
         
 

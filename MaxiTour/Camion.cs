@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Camion
+    public class Camion
     {
 
         #region GetSet

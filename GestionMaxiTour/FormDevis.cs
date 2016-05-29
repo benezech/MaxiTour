@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionMaxiTour
 {
-    public partial class FormSaisirDevis : Form
+    public partial class FormDevis : Form
     {
-        public FormSaisirDevis()
+        public FormDevis()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace GestionMaxiTour
 
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void groupBoxTotaux_Enter(object sender, EventArgs e)
         {
 
         }

@@ -6,37 +6,27 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Facture
+    public class Facture
     {
         #region GetSet
         public int Numero { get; private set; }
         public DateTime DateFacture { get; private set; }
-        public DateTime DateTournee { get; private set; }
-        public string DepartTournee { get; private set; }
-        public string DestinationTournee { get; private set; }
-        public double PrixTounee { get; private set; }
         public double TotalHT { get; private set; }
         public double TVA { get; private set; }
         public double TotalTTC { get; private set; }
         #endregion
 
-        public Contrat Contrat { get; private set; }
-
-
         #region List
-        public List<Imprevus> ListeImprevus { get; private set; }
+        public List<Imprevus> ListeImprevus = new List<Imprevus>();
         #endregion
 
 
         #region Constructeur
-        public Facture(int numero, DateTime dateFacture, DateTime dateTournee, string departTournee, string destinationTournee, double prixTournee, double totalHt, double tva, double totalttc)
+
+        public Facture(int numero, DateTime dateFacture, double totalHt, double tva, double totalttc)
         {
             Numero = numero;
             DateFacture = dateFacture;
-            DateTournee = dateTournee;
-            DepartTournee = departTournee;
-            DestinationTournee = destinationTournee;
-            PrixTounee = prixTournee;
             TotalHT = totalHt;
             TVA = tva;
             TotalTTC = totalttc;
@@ -47,24 +37,48 @@ namespace MaxiTour
             Numero = numero;
             DateFacture = dateFacture;
         }
+
+        public Facture()
+        {
+
+        }
         #endregion
 
 
 
-        
-
-        #region fonction
-        public double totalImprevu()
+        public double totalAvecImprevu()
         {
-            double totalImp = 0;
-            foreach (Imprevus Imp in ListeImprevus)
+            double total = this.TotalTTC;
+
+            foreach (Imprevus imprevus in ListeImprevus)
             {
-                totalImp += Imp.Cout;
+                total += imprevus.Cout;
             }
-            return totalImp;
-        }
-            #endregion
 
+            return total;
 
         }
+
+        public double calculTVA(double ttc)
+        {
+            double tva = 0;
+
+            tva = (20 * ttc) / 100;
+
+            return tva;
+
+        }
+
+        public double calculHT(double ttc, double tva)
+        {
+            double totalHT = 0;
+
+            totalHT = ttc - tva;
+
+            return totalHT;
+
+        }
+
+
+     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Chauffeur : Employe
+    public class Chauffeur : Employe
     {
         public List<Tournee> ListeTournee { get; set; }
         public List<Camion> ListeCamion { get; set; }

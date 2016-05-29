@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class TourneePrevi
+    public class TourneePrevi
     {
         #region GetSet
+        public bool Etat { get; private set; }
         public double Duree { get; private set; }
         public string IntituleLiaison { get; private set; }
+        public string TypeLiaison { get; private set; }
         public string Depart { get; private set; }
         public string Destination { get; private set; }
         public double Frequence { get; private set; }
@@ -22,10 +24,12 @@ namespace MaxiTour
         #endregion
 
         #region Constructeur
-        public TourneePrevi(double duree, string intituleLiaison, string depart, string destination, double frequence)
+        public TourneePrevi(bool etat, double duree, string intituleLiaison, string typeLiaison , string depart, string destination, double frequence)
         {
+            Etat = etat;
             Duree = duree;
             IntituleLiaison = intituleLiaison;
+            TypeLiaison = typeLiaison;
             Depart = depart;
             Destination = destination;
             Frequence = frequence;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Administratif : Employe
+    public class Administratif : Employe
     {
 
         public enum Poste { Comptable, Secretaire};

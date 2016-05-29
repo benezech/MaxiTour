@@ -28,222 +28,312 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelNumeroFacture = new System.Windows.Forms.Label();
-            this.labelDateFacture = new System.Windows.Forms.Label();
-            this.labelDateTournee = new System.Windows.Forms.Label();
-            this.labelDepartTournée = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.labelPrixTournee = new System.Windows.Forms.Label();
-            this.labelTotalHT = new System.Windows.Forms.Label();
-            this.labelTVA = new System.Windows.Forms.Label();
-            this.labelTotalTTC = new System.Windows.Forms.Label();
-            this.textBoxNumeroFacture = new System.Windows.Forms.TextBox();
-            this.labelTotalPrixImprevu = new System.Windows.Forms.Label();
-            this.textBoxDepartTournee = new System.Windows.Forms.TextBox();
-            this.textBoxDestinationTournee = new System.Windows.Forms.TextBox();
-            this.textBoxTotalPrixImprevu = new System.Windows.Forms.TextBox();
-            this.textBoxTotalTTC = new System.Windows.Forms.TextBox();
-            this.textBoxTotalHT = new System.Windows.Forms.TextBox();
-            this.dateTimePickerDateFacture = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDateTournee = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxImp = new System.Windows.Forms.ComboBox();
+            this.textBoxNumF = new System.Windows.Forms.TextBox();
+            this.textBoxDateF = new System.Windows.Forms.TextBox();
+            this.textBoxNumD = new System.Windows.Forms.TextBox();
+            this.textBoxHT = new System.Windows.Forms.TextBox();
             this.textBoxTVA = new System.Windows.Forms.TextBox();
-            this.textBoxPrixTournee = new System.Windows.Forms.TextBox();
+            this.textBoxTTC = new System.Windows.Forms.TextBox();
+            this.dateTimePickerF = new System.Windows.Forms.DateTimePicker();
+            this.dataGridFacture = new System.Windows.Forms.DataGridView();
+            this.buttonDebut = new System.Windows.Forms.Button();
+            this.buttonPrecedent = new System.Windows.Forms.Button();
+            this.buttonSuivant = new System.Windows.Forms.Button();
+            this.buttonFin = new System.Windows.Forms.Button();
+            this.buttonAjout = new System.Windows.Forms.Button();
+            this.buttonSupprim = new System.Windows.Forms.Button();
+            this.buttonModif = new System.Windows.Forms.Button();
+            this.buttonFermer = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFacture)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelNumeroFacture
+            // label1
             // 
-            this.labelNumeroFacture.AutoSize = true;
-            this.labelNumeroFacture.Location = new System.Drawing.Point(15, 15);
-            this.labelNumeroFacture.Name = "labelNumeroFacture";
-            this.labelNumeroFacture.Size = new System.Drawing.Size(89, 13);
-            this.labelNumeroFacture.TabIndex = 1;
-            this.labelNumeroFacture.Text = "Numéro Facture :";
-            this.labelNumeroFacture.Click += new System.EventHandler(this.label1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Numéro Facture";
             // 
-            // labelDateFacture
+            // label2
             // 
-            this.labelDateFacture.AutoSize = true;
-            this.labelDateFacture.Location = new System.Drawing.Point(15, 43);
-            this.labelDateFacture.Name = "labelDateFacture";
-            this.labelDateFacture.Size = new System.Drawing.Size(75, 13);
-            this.labelDateFacture.TabIndex = 2;
-            this.labelDateFacture.Text = "Date Facture :";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(21, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Date Facture";
             // 
-            // labelDateTournee
+            // label3
             // 
-            this.labelDateTournee.AutoSize = true;
-            this.labelDateTournee.Location = new System.Drawing.Point(15, 71);
-            this.labelDateTournee.Name = "labelDateTournee";
-            this.labelDateTournee.Size = new System.Drawing.Size(82, 13);
-            this.labelDateTournee.TabIndex = 4;
-            this.labelDateTournee.Text = "Date Tournée  :";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(21, 139);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Numéro Devis";
             // 
-            // labelDepartTournée
+            // label4
             // 
-            this.labelDepartTournée.AutoSize = true;
-            this.labelDepartTournée.Location = new System.Drawing.Point(15, 99);
-            this.labelDepartTournée.Name = "labelDepartTournée";
-            this.labelDepartTournée.Size = new System.Drawing.Size(88, 13);
-            this.labelDepartTournée.TabIndex = 6;
-            this.labelDepartTournée.Text = "Départ Tournée :";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 178);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Imprévus";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 127);
+            this.label5.Location = new System.Drawing.Point(21, 211);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Destination Tournée :";
+            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Total HT";
             // 
-            // labelPrixTournee
+            // label6
             // 
-            this.labelPrixTournee.AutoSize = true;
-            this.labelPrixTournee.Location = new System.Drawing.Point(15, 155);
-            this.labelPrixTournee.Name = "labelPrixTournee";
-            this.labelPrixTournee.Size = new System.Drawing.Size(73, 13);
-            this.labelPrixTournee.TabIndex = 10;
-            this.labelPrixTournee.Text = "Prix Tournée :";
-            this.labelPrixTournee.Click += new System.EventHandler(this.label6_Click);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 241);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(28, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "TVA";
             // 
-            // labelTotalHT
+            // label7
             // 
-            this.labelTotalHT.AutoSize = true;
-            this.labelTotalHT.Location = new System.Drawing.Point(15, 183);
-            this.labelTotalHT.Name = "labelTotalHT";
-            this.labelTotalHT.Size = new System.Drawing.Size(55, 13);
-            this.labelTotalHT.TabIndex = 12;
-            this.labelTotalHT.Text = "Total HT :";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 13);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Total TTC";
             // 
-            // labelTVA
+            // comboBoxImp
             // 
-            this.labelTVA.AutoSize = true;
-            this.labelTVA.Location = new System.Drawing.Point(15, 211);
-            this.labelTVA.Name = "labelTVA";
-            this.labelTVA.Size = new System.Drawing.Size(34, 13);
-            this.labelTVA.TabIndex = 14;
-            this.labelTVA.Text = "TVA :";
-            this.labelTVA.Click += new System.EventHandler(this.label8_Click);
+            this.comboBoxImp.FormattingEnabled = true;
+            this.comboBoxImp.Location = new System.Drawing.Point(105, 175);
+            this.comboBoxImp.Name = "comboBoxImp";
+            this.comboBoxImp.Size = new System.Drawing.Size(258, 21);
+            this.comboBoxImp.TabIndex = 7;
             // 
-            // labelTotalTTC
+            // textBoxNumF
             // 
-            this.labelTotalTTC.AutoSize = true;
-            this.labelTotalTTC.Location = new System.Drawing.Point(15, 239);
-            this.labelTotalTTC.Name = "labelTotalTTC";
-            this.labelTotalTTC.Size = new System.Drawing.Size(61, 13);
-            this.labelTotalTTC.TabIndex = 16;
-            this.labelTotalTTC.Text = "Total TTC :";
-            this.labelTotalTTC.Click += new System.EventHandler(this.label9_Click);
+            this.textBoxNumF.Enabled = false;
+            this.textBoxNumF.Location = new System.Drawing.Point(104, 28);
+            this.textBoxNumF.Name = "textBoxNumF";
+            this.textBoxNumF.Size = new System.Drawing.Size(259, 20);
+            this.textBoxNumF.TabIndex = 8;
             // 
-            // textBoxNumeroFacture
+            // textBoxDateF
             // 
-            this.textBoxNumeroFacture.Location = new System.Drawing.Point(138, 8);
-            this.textBoxNumeroFacture.Name = "textBoxNumeroFacture";
-            this.textBoxNumeroFacture.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNumeroFacture.TabIndex = 33;
+            this.textBoxDateF.Location = new System.Drawing.Point(104, 59);
+            this.textBoxDateF.Name = "textBoxDateF";
+            this.textBoxDateF.Size = new System.Drawing.Size(259, 20);
+            this.textBoxDateF.TabIndex = 9;
             // 
-            // labelTotalPrixImprevu
+            // textBoxNumD
             // 
-            this.labelTotalPrixImprevu.AutoSize = true;
-            this.labelTotalPrixImprevu.Location = new System.Drawing.Point(15, 267);
-            this.labelTotalPrixImprevu.Name = "labelTotalPrixImprevu";
-            this.labelTotalPrixImprevu.Size = new System.Drawing.Size(98, 13);
-            this.labelTotalPrixImprevu.TabIndex = 34;
-            this.labelTotalPrixImprevu.Text = "Total Prix Imprevu :";
-            this.labelTotalPrixImprevu.Click += new System.EventHandler(this.label1_Click_1);
+            this.textBoxNumD.Location = new System.Drawing.Point(105, 136);
+            this.textBoxNumD.Name = "textBoxNumD";
+            this.textBoxNumD.Size = new System.Drawing.Size(258, 20);
+            this.textBoxNumD.TabIndex = 10;
             // 
-            // textBoxDepartTournee
+            // textBoxHT
             // 
-            this.textBoxDepartTournee.Location = new System.Drawing.Point(138, 99);
-            this.textBoxDepartTournee.Name = "textBoxDepartTournee";
-            this.textBoxDepartTournee.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDepartTournee.TabIndex = 35;
-            // 
-            // textBoxDestinationTournee
-            // 
-            this.textBoxDestinationTournee.Location = new System.Drawing.Point(138, 127);
-            this.textBoxDestinationTournee.Name = "textBoxDestinationTournee";
-            this.textBoxDestinationTournee.Size = new System.Drawing.Size(100, 20);
-            this.textBoxDestinationTournee.TabIndex = 36;
-            // 
-            // textBoxTotalPrixImprevu
-            // 
-            this.textBoxTotalPrixImprevu.Location = new System.Drawing.Point(138, 260);
-            this.textBoxTotalPrixImprevu.Name = "textBoxTotalPrixImprevu";
-            this.textBoxTotalPrixImprevu.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTotalPrixImprevu.TabIndex = 37;
-            this.textBoxTotalPrixImprevu.TextChanged += new System.EventHandler(this.textBoxTotalPrixImprevu_TextChanged);
-            // 
-            // textBoxTotalTTC
-            // 
-            this.textBoxTotalTTC.Location = new System.Drawing.Point(138, 232);
-            this.textBoxTotalTTC.Name = "textBoxTotalTTC";
-            this.textBoxTotalTTC.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTotalTTC.TabIndex = 38;
-            // 
-            // textBoxTotalHT
-            // 
-            this.textBoxTotalHT.Location = new System.Drawing.Point(138, 176);
-            this.textBoxTotalHT.Name = "textBoxTotalHT";
-            this.textBoxTotalHT.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTotalHT.TabIndex = 39;
-            // 
-            // dateTimePickerDateFacture
-            // 
-            this.dateTimePickerDateFacture.Location = new System.Drawing.Point(120, 43);
-            this.dateTimePickerDateFacture.Name = "dateTimePickerDateFacture";
-            this.dateTimePickerDateFacture.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDateFacture.TabIndex = 41;
-            // 
-            // dateTimePickerDateTournee
-            // 
-            this.dateTimePickerDateTournee.Location = new System.Drawing.Point(120, 71);
-            this.dateTimePickerDateTournee.Name = "dateTimePickerDateTournee";
-            this.dateTimePickerDateTournee.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePickerDateTournee.TabIndex = 42;
+            this.textBoxHT.Enabled = false;
+            this.textBoxHT.Location = new System.Drawing.Point(105, 211);
+            this.textBoxHT.Name = "textBoxHT";
+            this.textBoxHT.Size = new System.Drawing.Size(258, 20);
+            this.textBoxHT.TabIndex = 11;
             // 
             // textBoxTVA
             // 
-            this.textBoxTVA.Location = new System.Drawing.Point(138, 204);
+            this.textBoxTVA.Enabled = false;
+            this.textBoxTVA.Location = new System.Drawing.Point(105, 241);
             this.textBoxTVA.Name = "textBoxTVA";
-            this.textBoxTVA.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTVA.TabIndex = 43;
+            this.textBoxTVA.Size = new System.Drawing.Size(258, 20);
+            this.textBoxTVA.TabIndex = 12;
             // 
-            // textBoxPrixTournee
+            // textBoxTTC
             // 
-            this.textBoxPrixTournee.Location = new System.Drawing.Point(138, 153);
-            this.textBoxPrixTournee.Name = "textBoxPrixTournee";
-            this.textBoxPrixTournee.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPrixTournee.TabIndex = 44;
+            this.textBoxTTC.Location = new System.Drawing.Point(105, 272);
+            this.textBoxTTC.Name = "textBoxTTC";
+            this.textBoxTTC.Size = new System.Drawing.Size(258, 20);
+            this.textBoxTTC.TabIndex = 13;
+            // 
+            // dateTimePickerF
+            // 
+            this.dateTimePickerF.Location = new System.Drawing.Point(105, 98);
+            this.dateTimePickerF.Name = "dateTimePickerF";
+            this.dateTimePickerF.Size = new System.Drawing.Size(259, 20);
+            this.dateTimePickerF.TabIndex = 14;
+            // 
+            // dataGridFacture
+            // 
+            this.dataGridFacture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridFacture.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridFacture.Location = new System.Drawing.Point(410, 27);
+            this.dataGridFacture.Name = "dataGridFacture";
+            this.dataGridFacture.ReadOnly = true;
+            this.dataGridFacture.Size = new System.Drawing.Size(633, 308);
+            this.dataGridFacture.TabIndex = 15;
+            // 
+            // buttonDebut
+            // 
+            this.buttonDebut.Location = new System.Drawing.Point(24, 315);
+            this.buttonDebut.Name = "buttonDebut";
+            this.buttonDebut.Size = new System.Drawing.Size(37, 23);
+            this.buttonDebut.TabIndex = 16;
+            this.buttonDebut.Text = "<<";
+            this.buttonDebut.UseVisualStyleBackColor = true;
+            this.buttonDebut.Click += new System.EventHandler(this.buttonDebut_Click);
+            // 
+            // buttonPrecedent
+            // 
+            this.buttonPrecedent.Location = new System.Drawing.Point(67, 315);
+            this.buttonPrecedent.Name = "buttonPrecedent";
+            this.buttonPrecedent.Size = new System.Drawing.Size(37, 23);
+            this.buttonPrecedent.TabIndex = 17;
+            this.buttonPrecedent.Text = "<";
+            this.buttonPrecedent.UseVisualStyleBackColor = true;
+            this.buttonPrecedent.Click += new System.EventHandler(this.buttonPrecedent_Click);
+            // 
+            // buttonSuivant
+            // 
+            this.buttonSuivant.Location = new System.Drawing.Point(111, 315);
+            this.buttonSuivant.Name = "buttonSuivant";
+            this.buttonSuivant.Size = new System.Drawing.Size(37, 23);
+            this.buttonSuivant.TabIndex = 18;
+            this.buttonSuivant.Text = ">";
+            this.buttonSuivant.UseVisualStyleBackColor = true;
+            this.buttonSuivant.Click += new System.EventHandler(this.buttonSuivant_Click);
+            // 
+            // buttonFin
+            // 
+            this.buttonFin.Location = new System.Drawing.Point(160, 315);
+            this.buttonFin.Name = "buttonFin";
+            this.buttonFin.Size = new System.Drawing.Size(37, 23);
+            this.buttonFin.TabIndex = 19;
+            this.buttonFin.Text = ">>";
+            this.buttonFin.UseVisualStyleBackColor = true;
+            this.buttonFin.Click += new System.EventHandler(this.buttonFin_Click);
+            // 
+            // buttonAjout
+            // 
+            this.buttonAjout.Location = new System.Drawing.Point(219, 315);
+            this.buttonAjout.Name = "buttonAjout";
+            this.buttonAjout.Size = new System.Drawing.Size(44, 23);
+            this.buttonAjout.TabIndex = 20;
+            this.buttonAjout.Text = "+";
+            this.buttonAjout.UseVisualStyleBackColor = true;
+            this.buttonAjout.Click += new System.EventHandler(this.buttonAjout_Click);
+            // 
+            // buttonSupprim
+            // 
+            this.buttonSupprim.Location = new System.Drawing.Point(269, 315);
+            this.buttonSupprim.Name = "buttonSupprim";
+            this.buttonSupprim.Size = new System.Drawing.Size(44, 23);
+            this.buttonSupprim.TabIndex = 21;
+            this.buttonSupprim.Text = "-";
+            this.buttonSupprim.UseVisualStyleBackColor = true;
+            this.buttonSupprim.Click += new System.EventHandler(this.buttonSupprim_Click);
+            // 
+            // buttonModif
+            // 
+            this.buttonModif.Location = new System.Drawing.Point(319, 315);
+            this.buttonModif.Name = "buttonModif";
+            this.buttonModif.Size = new System.Drawing.Size(44, 23);
+            this.buttonModif.TabIndex = 22;
+            this.buttonModif.Text = "mod";
+            this.buttonModif.UseVisualStyleBackColor = true;
+            this.buttonModif.Click += new System.EventHandler(this.buttonModif_Click);
+            // 
+            // buttonFermer
+            // 
+            this.buttonFermer.Location = new System.Drawing.Point(171, 365);
+            this.buttonFermer.Name = "buttonFermer";
+            this.buttonFermer.Size = new System.Drawing.Size(75, 23);
+            this.buttonFermer.TabIndex = 23;
+            this.buttonFermer.Text = "fermer";
+            this.buttonFermer.UseVisualStyleBackColor = true;
+            this.buttonFermer.Click += new System.EventHandler(this.buttonFermer_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(370, 218);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Euros";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(370, 248);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Euros";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(370, 278);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(34, 13);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "Euros";
             // 
             // FormFacture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 309);
-            this.Controls.Add(this.textBoxPrixTournee);
+            this.ClientSize = new System.Drawing.Size(1070, 409);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.buttonFermer);
+            this.Controls.Add(this.buttonModif);
+            this.Controls.Add(this.buttonSupprim);
+            this.Controls.Add(this.buttonAjout);
+            this.Controls.Add(this.buttonFin);
+            this.Controls.Add(this.buttonSuivant);
+            this.Controls.Add(this.buttonPrecedent);
+            this.Controls.Add(this.buttonDebut);
+            this.Controls.Add(this.dataGridFacture);
+            this.Controls.Add(this.dateTimePickerF);
+            this.Controls.Add(this.textBoxTTC);
             this.Controls.Add(this.textBoxTVA);
-            this.Controls.Add(this.dateTimePickerDateTournee);
-            this.Controls.Add(this.dateTimePickerDateFacture);
-            this.Controls.Add(this.textBoxTotalHT);
-            this.Controls.Add(this.textBoxTotalTTC);
-            this.Controls.Add(this.textBoxTotalPrixImprevu);
-            this.Controls.Add(this.textBoxDestinationTournee);
-            this.Controls.Add(this.textBoxDepartTournee);
-            this.Controls.Add(this.labelTotalPrixImprevu);
-            this.Controls.Add(this.textBoxNumeroFacture);
-            this.Controls.Add(this.labelTotalTTC);
-            this.Controls.Add(this.labelTVA);
-            this.Controls.Add(this.labelTotalHT);
-            this.Controls.Add(this.labelPrixTournee);
+            this.Controls.Add(this.textBoxHT);
+            this.Controls.Add(this.textBoxNumD);
+            this.Controls.Add(this.textBoxDateF);
+            this.Controls.Add(this.textBoxNumF);
+            this.Controls.Add(this.comboBoxImp);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.labelDepartTournée);
-            this.Controls.Add(this.labelDateTournee);
-            this.Controls.Add(this.labelDateFacture);
-            this.Controls.Add(this.labelNumeroFacture);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Name = "FormFacture";
             this.Text = "Facture";
             this.Load += new System.EventHandler(this.FormFacture_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridFacture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,25 +341,33 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelNumeroFacture;
-        private System.Windows.Forms.Label labelDateFacture;
-        private System.Windows.Forms.Label labelDateTournee;
-        private System.Windows.Forms.Label labelDepartTournée;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label labelPrixTournee;
-        private System.Windows.Forms.Label labelTotalHT;
-        private System.Windows.Forms.Label labelTVA;
-        private System.Windows.Forms.Label labelTotalTTC;
-        private System.Windows.Forms.TextBox textBoxNumeroFacture;
-        private System.Windows.Forms.Label labelTotalPrixImprevu;
-        private System.Windows.Forms.TextBox textBoxDepartTournee;
-        private System.Windows.Forms.TextBox textBoxDestinationTournee;
-        private System.Windows.Forms.TextBox textBoxTotalPrixImprevu;
-        private System.Windows.Forms.TextBox textBoxTotalTTC;
-        private System.Windows.Forms.TextBox textBoxTotalHT;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDateFacture;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDateTournee;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBoxImp;
+        private System.Windows.Forms.TextBox textBoxNumF;
+        private System.Windows.Forms.TextBox textBoxDateF;
+        private System.Windows.Forms.TextBox textBoxNumD;
+        private System.Windows.Forms.TextBox textBoxHT;
         private System.Windows.Forms.TextBox textBoxTVA;
-        private System.Windows.Forms.TextBox textBoxPrixTournee;
+        private System.Windows.Forms.TextBox textBoxTTC;
+        private System.Windows.Forms.DateTimePicker dateTimePickerF;
+        private System.Windows.Forms.DataGridView dataGridFacture;
+        private System.Windows.Forms.Button buttonDebut;
+        private System.Windows.Forms.Button buttonPrecedent;
+        private System.Windows.Forms.Button buttonSuivant;
+        private System.Windows.Forms.Button buttonFin;
+        private System.Windows.Forms.Button buttonAjout;
+        private System.Windows.Forms.Button buttonSupprim;
+        private System.Windows.Forms.Button buttonModif;
+        private System.Windows.Forms.Button buttonFermer;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+
     }
 }

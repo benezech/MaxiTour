@@ -6,40 +6,26 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Tournee
+    public class Tournee : TourneePrevi
     {
 
-        #region GetSet
-        public double DurreTournee { get; private set; }
-        public string IntituleLiaison { get; private set; }
-        public string TypeLiaison { get; private set; }
-        public string Depart { get; private set; }
-        public string Destination { get; private set; }
-        public double Frequence { get; private set; }
-        #endregion
+
 
         #region List
-        public List<Chauffeur> ListeChauffeur { get; private set; }
+        
         public List<Camion> ListeCamion { get; private set; }
         #endregion
 
         #region Constructeur
-        public Tournee(double durreTournee, string intituleLiaison, string typeLiaison, string depart, string destination, double frequence)
+        public Tournee(bool etat, double duree, string intituleLiaison, string typeLiaison, string depart, string destination, double frequence)
+           : base  (etat, duree, intituleLiaison, typeLiaison, depart, destination, frequence)
         {
-            DurreTournee = durreTournee;
-            IntituleLiaison = intituleLiaison;
-            TypeLiaison = typeLiaison;
-            Depart = depart;
-            Destination = destination;
-            Frequence = frequence;
+            this.ListeChauffeur = new List<Chauffeur>();
+            this.ListeCamion = new List<Camion>();
+           
         }
 
 
-        public Tournee(double durreTournee, string intituleLiaison)
-        {
-            DurreTournee = durreTournee;
-            IntituleLiaison = intituleLiaison;
-        }
         #endregion
         
     }

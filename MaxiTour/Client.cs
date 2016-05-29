@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Client : Personne
+    public class Client : Personne
     {
         public string RaisonSociale { get; private set; }
         public int Siret { get; private set; }

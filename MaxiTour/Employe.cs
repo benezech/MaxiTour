@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    abstract class Employe : Personne
+    public abstract class Employe : Personne
     {
         public DateTime DateEmbauche { get; private set; }
         public string TypeContrat { get; set; }

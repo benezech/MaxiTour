@@ -6,55 +6,56 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    class Devis
+    public class Devis
     {
         public int Id { get; private set; }
         public bool Etat { get; set; }
         public double PrixPeage { get; set; }
         public double PrixCarburant { get; set; }
         public double PrixMaintenance { get; set; }
-
-        public double FraisEmploye { get; set; }
         public double PrixAssurance { get; set; }
+        public double FraisEmploye { get; set; }
         public double Taxe { get; set; }
         public double Ammortissement { get; set; }
         public string RessourceMateriel { get; set; }
         public double KmClient { get; set; }
         public double KmAlle { get; set; }
         public double KmRetour { get; set; }
-        public double Benef { get; set; }
         public double VolumeMarchandise { get; set; }
+        public string DateDebut { get; set; }
+        public string DateFin { get; set; }
+
         List<TourneePrevi> ListTourneePrevi = new List<TourneePrevi>();
-        const int ConsoCamion = 10;
+        
 
 
         #region constructeurs
 
-        public Devis ( int id, bool etat, double prixPeage, double prixCarburant, double prixMaintenance, double salaireEmploye, 
-                       double fraisEmploye,double prixAssurance, double taxe, double ammortissement, string ressourceMateriel,
-                       double kmClient, double kmAlle, double kmRetour,  double benef, double volumeMarchandise) 
+        public Devis(int id, bool etat, double prixPeage, double prixCarburant, double prixMaintenance, double prixAssurance, double salaireEmploye, 
+                       double fraisEmploye, double taxe, double ammortissement, string ressourceMateriel,
+                       double kmClient, double kmAlle, double kmRetour, double volumeMarchandise, string dateDebut, string dateFin) 
         {
             this.Id = id;
             this.Etat = etat;
             this.PrixPeage = prixPeage;
             this.PrixCarburant = prixCarburant;
             this.PrixMaintenance = prixMaintenance;
-
-            this.FraisEmploye = fraisEmploye;
             this.PrixAssurance = prixAssurance;
+            this.FraisEmploye = fraisEmploye;
             this.Taxe = taxe;
             this.Ammortissement = ammortissement;
             this.RessourceMateriel = ressourceMateriel;
             this.KmClient = kmClient;
             this.KmAlle = kmRetour;
             this.KmRetour = kmRetour;
-            this.Benef = benef;
             this.VolumeMarchandise = volumeMarchandise;
+            this.DateDebut = dateDebut;
+            this.DateFin = dateFin;
         }
 
         #endregion
 
-        /*fonctions à faire : */
+ 
 
         #region Fonctions
         public double kmPerdu()
@@ -77,8 +78,8 @@ namespace MaxiTour
         {
             double total;
 
-            total = PrixMaintenance + PrixPeage + PrixCarburant;
-            /* total = PrixMaintenance + PrixPeage + consoCamion();*/
+            total = PrixMaintenance + PrixPeage + prixAuKm();
+
             return total;
 
         }
@@ -112,22 +113,12 @@ namespace MaxiTour
 
         public double CalculFacturation()
         {
-            double Factu = this.TotalCout() + this.Benef;
+            double Factu = this.TotalCout();
             return Factu;
         }
 
 
         public double prixAuKm()
-        {
-            double total;
-
-            total = (ConsoCamion / 100) * PrixCarburant;
-
-            return total;
-
-        }
-
-        public double prixAuKmV2()
         {
 
             double consoCamion = 0;
