@@ -35,27 +35,25 @@
             this.labelFraisEmploye = new System.Windows.Forms.Label();
             this.labelAssurance = new System.Windows.Forms.Label();
             this.labelAm = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.id_tb = new System.Windows.Forms.TextBox();
+            this.etat_tb = new System.Windows.Forms.TextBox();
+            this.prixpeage_tb = new System.Windows.Forms.TextBox();
+            this.prixmaint_tb = new System.Windows.Forms.TextBox();
+            this.prixassur_tb = new System.Windows.Forms.TextBox();
+            this.fraisemploye_tb = new System.Windows.Forms.TextBox();
+            this.ammort_tb = new System.Windows.Forms.TextBox();
+            this.ressource_tb = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.kmclient_tb = new System.Windows.Forms.TextBox();
+            this.kmallee_tb = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.kmretour_tb = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.totalkm_tb = new System.Windows.Forms.TextBox();
             this.groupBoxTotaux = new System.Windows.Forms.GroupBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -67,16 +65,21 @@
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonDebut = new System.Windows.Forms.Button();
+            this.buttonPrecedent = new System.Windows.Forms.Button();
+            this.buttonSuivant = new System.Windows.Forms.Button();
+            this.buttonFin = new System.Windows.Forms.Button();
+            this.buttonAjout = new System.Windows.Forms.Button();
+            this.buttonSupprim = new System.Windows.Forms.Button();
+            this.buttonModif = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonFermer = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.groupBoxTotaux.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -119,7 +122,7 @@
             // labelFraisEmploye
             // 
             this.labelFraisEmploye.AutoSize = true;
-            this.labelFraisEmploye.Location = new System.Drawing.Point(18, 245);
+            this.labelFraisEmploye.Location = new System.Drawing.Point(18, 214);
             this.labelFraisEmploye.Name = "labelFraisEmploye";
             this.labelFraisEmploye.Size = new System.Drawing.Size(92, 13);
             this.labelFraisEmploye.TabIndex = 5;
@@ -137,96 +140,96 @@
             // labelAm
             // 
             this.labelAm.AutoSize = true;
-            this.labelAm.Location = new System.Drawing.Point(18, 283);
+            this.labelAm.Location = new System.Drawing.Point(18, 252);
             this.labelAm.Name = "labelAm";
             this.labelAm.Size = new System.Drawing.Size(83, 13);
             this.labelAm.TabIndex = 7;
             this.labelAm.Text = "Ammortissement";
             // 
-            // textBoxID
+            // id_tb
             // 
-            this.textBoxID.Enabled = false;
-            this.textBoxID.Location = new System.Drawing.Point(139, 26);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(121, 20);
-            this.textBoxID.TabIndex = 8;
+            this.id_tb.Enabled = false;
+            this.id_tb.Location = new System.Drawing.Point(139, 26);
+            this.id_tb.Name = "id_tb";
+            this.id_tb.Size = new System.Drawing.Size(121, 20);
+            this.id_tb.TabIndex = 8;
             // 
-            // textBox2
+            // etat_tb
             // 
-            this.textBox2.Location = new System.Drawing.Point(139, 60);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 9;
+            this.etat_tb.Location = new System.Drawing.Point(139, 60);
+            this.etat_tb.Name = "etat_tb";
+            this.etat_tb.Size = new System.Drawing.Size(121, 20);
+            this.etat_tb.TabIndex = 9;
             // 
-            // textBox3
+            // prixpeage_tb
             // 
-            this.textBox3.Location = new System.Drawing.Point(139, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 10;
+            this.prixpeage_tb.Location = new System.Drawing.Point(139, 92);
+            this.prixpeage_tb.Name = "prixpeage_tb";
+            this.prixpeage_tb.Size = new System.Drawing.Size(121, 20);
+            this.prixpeage_tb.TabIndex = 10;
             // 
-            // textBox4
+            // prixmaint_tb
             // 
-            this.textBox4.Location = new System.Drawing.Point(139, 132);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 20);
-            this.textBox4.TabIndex = 11;
+            this.prixmaint_tb.Location = new System.Drawing.Point(139, 132);
+            this.prixmaint_tb.Name = "prixmaint_tb";
+            this.prixmaint_tb.Size = new System.Drawing.Size(121, 20);
+            this.prixmaint_tb.TabIndex = 11;
             // 
-            // textBox5
+            // prixassur_tb
             // 
-            this.textBox5.Location = new System.Drawing.Point(139, 174);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(121, 20);
-            this.textBox5.TabIndex = 12;
+            this.prixassur_tb.Location = new System.Drawing.Point(139, 174);
+            this.prixassur_tb.Name = "prixassur_tb";
+            this.prixassur_tb.Size = new System.Drawing.Size(121, 20);
+            this.prixassur_tb.TabIndex = 12;
             // 
-            // textBox7
+            // fraisemploye_tb
             // 
-            this.textBox7.Location = new System.Drawing.Point(139, 245);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(121, 20);
-            this.textBox7.TabIndex = 14;
+            this.fraisemploye_tb.Location = new System.Drawing.Point(139, 214);
+            this.fraisemploye_tb.Name = "fraisemploye_tb";
+            this.fraisemploye_tb.Size = new System.Drawing.Size(121, 20);
+            this.fraisemploye_tb.TabIndex = 14;
             // 
-            // textBox8
+            // ammort_tb
             // 
-            this.textBox8.Location = new System.Drawing.Point(139, 280);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(121, 20);
-            this.textBox8.TabIndex = 15;
+            this.ammort_tb.Location = new System.Drawing.Point(139, 249);
+            this.ammort_tb.Name = "ammort_tb";
+            this.ammort_tb.Size = new System.Drawing.Size(121, 20);
+            this.ammort_tb.TabIndex = 15;
             // 
-            // textBox1
+            // ressource_tb
             // 
-            this.textBox1.Location = new System.Drawing.Point(414, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 16;
+            this.ressource_tb.Location = new System.Drawing.Point(138, 280);
+            this.ressource_tb.Name = "ressource_tb";
+            this.ressource_tb.Size = new System.Drawing.Size(121, 20);
+            this.ressource_tb.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(293, 33);
+            this.label1.Location = new System.Drawing.Point(18, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Ressource(s) : ";
             // 
-            // textBox9
+            // kmclient_tb
             // 
-            this.textBox9.Location = new System.Drawing.Point(414, 77);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(121, 20);
-            this.textBox9.TabIndex = 18;
+            this.kmclient_tb.Location = new System.Drawing.Point(424, 22);
+            this.kmclient_tb.Name = "kmclient_tb";
+            this.kmclient_tb.Size = new System.Drawing.Size(121, 20);
+            this.kmclient_tb.TabIndex = 18;
             // 
-            // textBox10
+            // kmallee_tb
             // 
-            this.textBox10.Location = new System.Drawing.Point(414, 121);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(121, 20);
-            this.textBox10.TabIndex = 19;
+            this.kmallee_tb.Location = new System.Drawing.Point(424, 63);
+            this.kmallee_tb.Name = "kmallee_tb";
+            this.kmallee_tb.Size = new System.Drawing.Size(121, 20);
+            this.kmallee_tb.TabIndex = 19;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(293, 84);
+            this.label2.Location = new System.Drawing.Point(303, 29);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 20;
@@ -235,7 +238,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(293, 128);
+            this.label3.Location = new System.Drawing.Point(304, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 13);
             this.label3.TabIndex = 21;
@@ -244,22 +247,22 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(293, 161);
+            this.label6.Location = new System.Drawing.Point(307, 102);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 13);
             this.label6.TabIndex = 22;
             this.label6.Text = "Kilomètres Retour : ";
             // 
-            // textBox11
+            // kmretour_tb
             // 
-            this.textBox11.Location = new System.Drawing.Point(414, 154);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(121, 20);
-            this.textBox11.TabIndex = 23;
+            this.kmretour_tb.Location = new System.Drawing.Point(424, 99);
+            this.kmretour_tb.Name = "kmretour_tb";
+            this.kmretour_tb.Size = new System.Drawing.Size(121, 20);
+            this.kmretour_tb.TabIndex = 23;
             // 
             // textBox12
             // 
-            this.textBox12.Location = new System.Drawing.Point(414, 278);
+            this.textBox12.Location = new System.Drawing.Point(426, 170);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(121, 20);
             this.textBox12.TabIndex = 24;
@@ -267,7 +270,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(291, 281);
+            this.label7.Location = new System.Drawing.Point(303, 173);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 13);
             this.label7.TabIndex = 25;
@@ -276,35 +279,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(291, 193);
+            this.label8.Location = new System.Drawing.Point(301, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(91, 13);
             this.label8.TabIndex = 26;
             this.label8.Text = "Total Kilomètres : ";
             // 
-            // textBox13
+            // totalkm_tb
             // 
-            this.textBox13.Enabled = false;
-            this.textBox13.Location = new System.Drawing.Point(414, 190);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(121, 20);
-            this.textBox13.TabIndex = 27;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(291, 221);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "Fréquence Tournée : ";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(414, 221);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(121, 20);
-            this.textBox14.TabIndex = 29;
+            this.totalkm_tb.Enabled = false;
+            this.totalkm_tb.Location = new System.Drawing.Point(424, 135);
+            this.totalkm_tb.Name = "totalkm_tb";
+            this.totalkm_tb.Size = new System.Drawing.Size(121, 20);
+            this.totalkm_tb.TabIndex = 27;
             // 
             // groupBoxTotaux
             // 
@@ -411,76 +398,72 @@
             this.label10.TabIndex = 28;
             this.label10.Text = "Prix au kilomètre";
             // 
-            // comboBox1
+            // buttonDebut
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(414, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 31;
+            this.buttonDebut.Location = new System.Drawing.Point(12, 324);
+            this.buttonDebut.Name = "buttonDebut";
+            this.buttonDebut.Size = new System.Drawing.Size(36, 23);
+            this.buttonDebut.TabIndex = 32;
+            this.buttonDebut.Text = "<<";
+            this.buttonDebut.UseVisualStyleBackColor = true;
+            this.buttonDebut.Click += new System.EventHandler(this.buttonDebut_Click);
             // 
-            // button1
+            // buttonPrecedent
             // 
-            this.button1.Location = new System.Drawing.Point(12, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 23);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "<<";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonPrecedent.Location = new System.Drawing.Point(54, 324);
+            this.buttonPrecedent.Name = "buttonPrecedent";
+            this.buttonPrecedent.Size = new System.Drawing.Size(36, 23);
+            this.buttonPrecedent.TabIndex = 33;
+            this.buttonPrecedent.Text = "<";
+            this.buttonPrecedent.UseVisualStyleBackColor = true;
+            this.buttonPrecedent.Click += new System.EventHandler(this.buttonPrecedent_Click);
             // 
-            // button2
+            // buttonSuivant
             // 
-            this.button2.Location = new System.Drawing.Point(54, 324);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 23);
-            this.button2.TabIndex = 33;
-            this.button2.Text = "<";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSuivant.Location = new System.Drawing.Point(96, 324);
+            this.buttonSuivant.Name = "buttonSuivant";
+            this.buttonSuivant.Size = new System.Drawing.Size(36, 23);
+            this.buttonSuivant.TabIndex = 34;
+            this.buttonSuivant.Text = ">";
+            this.buttonSuivant.UseVisualStyleBackColor = true;
+            this.buttonSuivant.Click += new System.EventHandler(this.buttonSuivant_Click);
             // 
-            // button3
+            // buttonFin
             // 
-            this.button3.Location = new System.Drawing.Point(96, 324);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 23);
-            this.button3.TabIndex = 34;
-            this.button3.Text = ">";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonFin.Location = new System.Drawing.Point(138, 324);
+            this.buttonFin.Name = "buttonFin";
+            this.buttonFin.Size = new System.Drawing.Size(36, 23);
+            this.buttonFin.TabIndex = 35;
+            this.buttonFin.Text = ">>";
+            this.buttonFin.UseVisualStyleBackColor = true;
+            this.buttonFin.Click += new System.EventHandler(this.buttonFin_Click);
             // 
-            // button4
+            // buttonAjout
             // 
-            this.button4.Location = new System.Drawing.Point(138, 324);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(36, 23);
-            this.button4.TabIndex = 35;
-            this.button4.Text = ">>";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonAjout.Location = new System.Drawing.Point(200, 324);
+            this.buttonAjout.Name = "buttonAjout";
+            this.buttonAjout.Size = new System.Drawing.Size(60, 23);
+            this.buttonAjout.TabIndex = 36;
+            this.buttonAjout.Text = "+";
+            this.buttonAjout.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // buttonSupprim
             // 
-            this.button5.Location = new System.Drawing.Point(200, 324);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 23);
-            this.button5.TabIndex = 36;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = true;
+            this.buttonSupprim.Location = new System.Drawing.Point(270, 324);
+            this.buttonSupprim.Name = "buttonSupprim";
+            this.buttonSupprim.Size = new System.Drawing.Size(60, 23);
+            this.buttonSupprim.TabIndex = 37;
+            this.buttonSupprim.Text = "-";
+            this.buttonSupprim.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // buttonModif
             // 
-            this.button6.Location = new System.Drawing.Point(270, 324);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 23);
-            this.button6.TabIndex = 37;
-            this.button6.Text = "-";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(336, 324);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 23);
-            this.button7.TabIndex = 38;
-            this.button7.Text = "mod";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonModif.Location = new System.Drawing.Point(336, 324);
+            this.buttonModif.Name = "buttonModif";
+            this.buttonModif.Size = new System.Drawing.Size(60, 23);
+            this.buttonModif.TabIndex = 38;
+            this.buttonModif.Text = "mod";
+            this.buttonModif.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -491,52 +474,102 @@
             this.button8.Text = "liste des devis";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // buttonFermer
             // 
-            this.button9.Location = new System.Drawing.Point(673, 324);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(83, 23);
-            this.button9.TabIndex = 40;
-            this.button9.Text = "Fermer";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonFermer.Location = new System.Drawing.Point(673, 324);
+            this.buttonFermer.Name = "buttonFermer";
+            this.buttonFermer.Size = new System.Drawing.Size(83, 23);
+            this.buttonFermer.TabIndex = 40;
+            this.buttonFermer.Text = "Fermer";
+            this.buttonFermer.UseVisualStyleBackColor = true;
+            this.buttonFermer.Click += new System.EventHandler(this.buttonFermer_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(304, 225);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 13);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Date Début";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(307, 287);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 13);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Date Fin";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(372, 225);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(175, 20);
+            this.textBox1.TabIndex = 43;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(372, 280);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(173, 20);
+            this.textBox2.TabIndex = 44;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(306, 251);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(239, 20);
+            this.dateTimePicker1.TabIndex = 45;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(307, 199);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(238, 20);
+            this.dateTimePicker2.TabIndex = 46;
             // 
             // FormDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 370);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.groupBoxTotaux);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.buttonFermer);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.buttonModif);
+            this.Controls.Add(this.buttonSupprim);
+            this.Controls.Add(this.buttonAjout);
+            this.Controls.Add(this.buttonFin);
+            this.Controls.Add(this.buttonSuivant);
+            this.Controls.Add(this.buttonPrecedent);
+            this.Controls.Add(this.buttonDebut);
+            this.Controls.Add(this.groupBoxTotaux);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.kmretour_tb);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.totalkm_tb);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.kmallee_tb);
+            this.Controls.Add(this.kmclient_tb);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBoxID);
+            this.Controls.Add(this.ressource_tb);
+            this.Controls.Add(this.ammort_tb);
+            this.Controls.Add(this.fraisemploye_tb);
+            this.Controls.Add(this.prixassur_tb);
+            this.Controls.Add(this.prixmaint_tb);
+            this.Controls.Add(this.prixpeage_tb);
+            this.Controls.Add(this.etat_tb);
+            this.Controls.Add(this.id_tb);
             this.Controls.Add(this.labelAm);
             this.Controls.Add(this.labelAssurance);
             this.Controls.Add(this.labelFraisEmploye);
@@ -563,27 +596,25 @@
         private System.Windows.Forms.Label labelFraisEmploye;
         private System.Windows.Forms.Label labelAssurance;
         private System.Windows.Forms.Label labelAm;
-        private System.Windows.Forms.TextBox textBoxID;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox id_tb;
+        private System.Windows.Forms.TextBox etat_tb;
+        private System.Windows.Forms.TextBox prixpeage_tb;
+        private System.Windows.Forms.TextBox prixmaint_tb;
+        private System.Windows.Forms.TextBox prixassur_tb;
+        private System.Windows.Forms.TextBox fraisemploye_tb;
+        private System.Windows.Forms.TextBox ammort_tb;
+        private System.Windows.Forms.TextBox ressource_tb;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox kmclient_tb;
+        private System.Windows.Forms.TextBox kmallee_tb;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox kmretour_tb;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox totalkm_tb;
         private System.Windows.Forms.GroupBox groupBoxTotaux;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label10;
@@ -595,15 +626,20 @@
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonDebut;
+        private System.Windows.Forms.Button buttonPrecedent;
+        private System.Windows.Forms.Button buttonSuivant;
+        private System.Windows.Forms.Button buttonFin;
+        private System.Windows.Forms.Button buttonAjout;
+        private System.Windows.Forms.Button buttonSupprim;
+        private System.Windows.Forms.Button buttonModif;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button buttonFermer;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

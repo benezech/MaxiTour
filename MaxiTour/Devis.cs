@@ -25,6 +25,8 @@ namespace MaxiTour
         public string DateDebut { get; set; }
         public string DateFin { get; set; }
 
+        public Client Client { get; set; }
+
         List<TourneePrevi> ListTourneePrevi = new List<TourneePrevi>();
         
 
@@ -51,6 +53,11 @@ namespace MaxiTour
             this.VolumeMarchandise = volumeMarchandise;
             this.DateDebut = dateDebut;
             this.DateFin = dateFin;
+        }
+
+        public Devis()
+        {
+
         }
 
         #endregion
@@ -94,6 +101,7 @@ namespace MaxiTour
             return total;
 
         }
+
         public double sousTotalPrixChauffeur()
         {
             double total;
@@ -147,6 +155,20 @@ namespace MaxiTour
             }
 
             return consoCamion;
+        }
+
+        public int getClientId()
+        {
+            int id = this.Client.Id;
+
+            return id;
+        }
+
+        public string[] tourneeprevi()
+        {
+            string[] tourneesprevi = new string[10];
+            
+            return tourneesprevi;
         }
         #endregion
     }
