@@ -14,21 +14,21 @@ using MySql.Data.MySqlClient;
 
 namespace GestionMaxiTour
 {
-    public partial class FormListeClients : Form
+    public partial class FormListeDevis : Form
     {
         GestionBDD gestionBdd = new GestionBDD();
-        Client client = new Client();
+        Devis devis = new Devis();
 
-        public FormListeClients()
+        public FormListeDevis()
         {
             InitializeComponent();
         }
 
-        private void FormListeClients_Load(object sender, EventArgs e)
+        private void FormListeDevis_Load(object sender, EventArgs e)
         {
             gestionBdd.Connexion();
 
-            dataGridListeClients.DataSource = gestionBdd.request_select("SELECT * FROM Client");
+            dataGridDevis.DataSource = gestionBdd.request_select("SELECT * FROM Devis");
 
         }
     }

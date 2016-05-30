@@ -14,10 +14,18 @@ namespace MaxiTour
         public Devis DevisClient { get; set; }
         public Dirigeant ContactClient { get; set; }
 
+        public string detailClient
+        {
+            get
+            {
+                return Id + "-" + Nom + " " + Prenom + " " + RaisonSociale;
+            }
+        }
+
         #region constructeurs
 
-        public Client ( string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email,string raisonSociale, int siret, string codeNaf)
-            : base(nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
+        public Client ( int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email,string raisonSociale, int siret, string codeNaf)
+            : base(id, nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
 
         {
 
@@ -30,7 +38,16 @@ namespace MaxiTour
         public Client (string nom, string prenom)
             : base( nom, prenom)
         {
+
         }
+
+        public Client()
+            : base()
+        {
+
+        }
+
+
 
         #endregion
     }

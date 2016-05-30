@@ -9,7 +9,7 @@ namespace MaxiTour
     public class Devis
     {
         public int Id { get; private set; }
-        public bool Etat { get; set; }
+        public string Etat { get; set; }
         public double PrixPeage { get; set; }
         public double PrixCarburant { get; set; }
         public double PrixMaintenance { get; set; }
@@ -33,7 +33,7 @@ namespace MaxiTour
 
         #region constructeurs
 
-        public Devis(int id, bool etat, double prixPeage, double prixCarburant, double prixMaintenance, double prixAssurance, double salaireEmploye, 
+        public Devis(int id, string etat, double prixPeage, double prixCarburant, double prixMaintenance, double prixAssurance, double salaireEmploye, 
                        double fraisEmploye, double taxe, double ammortissement, string ressourceMateriel,
                        double kmClient, double kmAlle, double kmRetour, double volumeMarchandise, string dateDebut, string dateFin) 
         {
@@ -73,10 +73,18 @@ namespace MaxiTour
             return kmPerdu;
         }
 
-        public double kmTotal()
+        /*public double kmTotal( )
         {
             double kmTotal;
             kmTotal = KmClient + KmAlle + KmRetour;
+
+            return kmTotal;
+        }*/
+
+        public double kmTotal(double kmc, double kma, double kmr)
+        {
+            double kmTotal;
+            kmTotal = kmc + kma + kmr;
 
             return kmTotal;
         }

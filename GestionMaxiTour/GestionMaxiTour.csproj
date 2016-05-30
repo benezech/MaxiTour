@@ -108,6 +108,12 @@
     <Compile Include="FormListeClients.Designer.cs">
       <DependentUpon>FormListeClients.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListeDevis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListeDevis.Designer.cs">
+      <DependentUpon>FormListeDevis.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormListeFacture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormListeClients.resx">
       <DependentUpon>FormListeClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListeDevis.resx">
+      <DependentUpon>FormListeDevis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormListeFacture.resx">
       <DependentUpon>FormListeFacture.cs</DependentUpon>

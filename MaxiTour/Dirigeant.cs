@@ -17,8 +17,8 @@ namespace MaxiTour
         public List<Chauffeur> ListeChauffeur { get; set; }
         #region constructeurs
 
-        public Dirigeant(string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email)
-            : base( nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
+        public Dirigeant( int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email)
+            : base( id, nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
         {
             this.ListeClient = new List<Client>();
             this.ListeCamion = new List<Camion>();

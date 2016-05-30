@@ -29,61 +29,52 @@
         private void InitializeComponent()
         {
             this.buttonFermer = new System.Windows.Forms.Button();
-            this.labelListeClient = new System.Windows.Forms.Label();
-            this.dataGridViewListeClients = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeClients)).BeginInit();
+            this.dataGridListeClients = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListeClients)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonFermer
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(944, 799);
+            this.buttonFermer.Location = new System.Drawing.Point(472, 415);
+            this.buttonFermer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonFermer.Name = "buttonFermer";
-            this.buttonFermer.Size = new System.Drawing.Size(219, 51);
+            this.buttonFermer.Size = new System.Drawing.Size(110, 27);
             this.buttonFermer.TabIndex = 5;
             this.buttonFermer.Text = "Fermer";
             this.buttonFermer.UseVisualStyleBackColor = true;
             // 
-            // labelListeClient
+            // dataGridListeClients
             // 
-            this.labelListeClient.AutoSize = true;
-            this.labelListeClient.Location = new System.Drawing.Point(92, 95);
-            this.labelListeClient.Name = "labelListeClient";
-            this.labelListeClient.Size = new System.Drawing.Size(183, 25);
-            this.labelListeClient.TabIndex = 4;
-            this.labelListeClient.Text = "Liste des Clients :";
-            // 
-            // dataGridViewListeClients
-            // 
-            this.dataGridViewListeClients.AllowUserToAddRows = false;
-            this.dataGridViewListeClients.AllowUserToDeleteRows = false;
-            this.dataGridViewListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListeClients.Location = new System.Drawing.Point(97, 155);
-            this.dataGridViewListeClients.Name = "dataGridViewListeClients";
-            this.dataGridViewListeClients.ReadOnly = true;
-            this.dataGridViewListeClients.RowTemplate.Height = 33;
-            this.dataGridViewListeClients.Size = new System.Drawing.Size(1066, 584);
-            this.dataGridViewListeClients.TabIndex = 3;
+            this.dataGridListeClients.AllowUserToAddRows = false;
+            this.dataGridListeClients.AllowUserToDeleteRows = false;
+            this.dataGridListeClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridListeClients.Location = new System.Drawing.Point(25, 23);
+            this.dataGridListeClients.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridListeClients.Name = "dataGridListeClients";
+            this.dataGridListeClients.ReadOnly = true;
+            this.dataGridListeClients.RowTemplate.Height = 33;
+            this.dataGridListeClients.Size = new System.Drawing.Size(774, 347);
+            this.dataGridListeClients.TabIndex = 3;
             // 
             // FormListeClients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 897);
+            this.ClientSize = new System.Drawing.Size(821, 381);
             this.Controls.Add(this.buttonFermer);
-            this.Controls.Add(this.labelListeClient);
-            this.Controls.Add(this.dataGridViewListeClients);
+            this.Controls.Add(this.dataGridListeClients);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormListeClients";
             this.Text = "Liste des Clients";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeClients)).EndInit();
+            this.Load += new System.EventHandler(this.FormListeClients_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListeClients)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Button buttonFermer;
-        private System.Windows.Forms.Label labelListeClient;
-        private System.Windows.Forms.DataGridView dataGridViewListeClients;
+        private System.Windows.Forms.DataGridView dataGridListeClients;
     }
 }

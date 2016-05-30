@@ -20,8 +20,9 @@ namespace MaxiTour
 
         #region constructeurs
 
-        public Personne(string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email)
+        public Personne(int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email)
         {
+            this.Id = id;
             this.Nom = nom;
             this.Prenom = prenom;
             this.NumSecu = numsecu;
@@ -36,6 +37,11 @@ namespace MaxiTour
         {
             this.Nom = nom;
             this.Prenom = prenom;
+        }
+
+        public Personne()
+        {
+
         }
 
         #endregion

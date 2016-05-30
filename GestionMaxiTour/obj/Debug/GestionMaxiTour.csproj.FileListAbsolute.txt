@@ -27,3 +27,4 @@ C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\G
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.pdb
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormDevis.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormImprevu.resources
+C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeDevis.resources

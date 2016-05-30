@@ -210,6 +210,11 @@ namespace GestionMaxiTour
             this.Close();
         }
 
+        /*public afficherImprevus()
+        {
+            foreach (Imprevus unimprevus in facture.ListeImprevus){ assignedToColumn.Items.Add(unimprevus);}
+        }*/
+
 
 
     }

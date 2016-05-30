@@ -15,8 +15,8 @@ namespace MaxiTour
 
         #region constructeurs
 
-        public Employe ( string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, DateTime dateEmbauche, string typeContrat, double salaire, double nbrHeures)
-            : base(nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
+        public Employe ( int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, DateTime dateEmbauche, string typeContrat, double salaire, double nbrHeures)
+            : base(id, nom, prenom, numsecu, adresse, codepostal, ville, telephone, email)
         {
             this.DateEmbauche = dateEmbauche;
             this.TypeContrat = typeContrat;

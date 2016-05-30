@@ -13,8 +13,8 @@ namespace MaxiTour
         public List<TourneePrevi> ListeTourneePrevi { get; set; }
         #region constructeurs
 
-        public Chauffeur (string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, DateTime dateEmbauche, string typeContrat, double salaire, double nbrHeures)
-            : base ( nom,  prenom,  numsecu,  adresse,  codepostal,  ville,  telephone,  email,  dateEmbauche,  typeContrat,  salaire, nbrHeures)
+        public Chauffeur (int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, DateTime dateEmbauche, string typeContrat, double salaire, double nbrHeures)
+            : base ( id, nom,  prenom,  numsecu,  adresse,  codepostal,  ville,  telephone,  email,  dateEmbauche,  typeContrat,  salaire, nbrHeures)
         {
             this.ListeTournee = new List<Tournee>();
             this.ListeCamion = new List<Camion>();

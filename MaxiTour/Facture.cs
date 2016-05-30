@@ -40,7 +40,7 @@ namespace MaxiTour
 
         public Facture()
         {
-
+            List<Imprevus> ListeImprevus = new List<Imprevus>();
         }
         #endregion
 
@@ -78,6 +78,8 @@ namespace MaxiTour
             return totalHT;
 
         }
+
+      
 
 
      }

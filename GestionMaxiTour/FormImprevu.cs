@@ -109,7 +109,7 @@ namespace GestionMaxiTour
             else
                 if (this.type_tb.Text != null && this.numfacture_tb.Text != null && this.cout_tb.Text != null)
                 {
-                    int nf = Int32.Parse(this.numfacture_tb.Text);
+                    int nf = Int32.Parse(this.identifiant_tb.Text);
                     string type = this.type_tb.Text;
                     double cout = Convert.ToDouble(this.cout_tb.Text);
                    
@@ -142,7 +142,7 @@ namespace GestionMaxiTour
                 int id = Int32.Parse(this.identifiant_tb.Text);
 
 
-                string req = "Delete from Inprevus Where idImprevus = " + id + ";";
+                string req = "Delete from Imprevus Where idImprevus = " + id + ";";
                 gestionBdd.request_action(req);
 
                 position = 0;
@@ -157,20 +157,21 @@ namespace GestionMaxiTour
 
         private void buttonModif_Click(object sender, EventArgs e)
         {
-                        if (this.buttonModif.Text == "mod")
+            if (this.buttonModif.Text == "mod")
             {
                 this.buttonModif.Text = "Modif";
             }
 
 
             else
-                if (this.type_tb.Text != null && this.numfacture_tb.Text != null && this.cout_tb.Text != null)
+                if (this.numfacture_tb.Text != null && this.type_tb.Text != null && this.cout_tb.Text != null)
                 {
-                    string type = this.type_tb.Text;
+                    int id = Int32.Parse(this.identifiant_tb.Text);
                     int nf = Int32.Parse(this.numfacture_tb.Text );
+                    string type = this.type_tb.Text;
                     double cout = Convert.ToDouble(this.cout_tb.Text);
 
-                    string req = "update Imprevus Set NumFacture= " + nf + ", TypeImprevus'" + type + "', Cout=" + cout + ");";
+                    string req = "update Imprevus Set NumFacture= " + nf + ", TypeImprevus ='" + type + "', Cout= " + cout + " where idImprevus =" + id + ";";
                     gestionBdd.request_action(req);
 
                     MessageBox.Show("Imprévus modifié!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
