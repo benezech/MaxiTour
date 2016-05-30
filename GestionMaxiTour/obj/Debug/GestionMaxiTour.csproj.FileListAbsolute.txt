@@ -27,3 +27,27 @@ C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\G
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.pdb
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormDevis.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormImprevu.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\GestionMaxiTour.exe.config
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.exe
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.pdb
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\GestionMaxiTour.exe
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\GestionMaxiTour.pdb
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\MaxiTour.exe
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\MySql.Data.dll
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\MaxiTour.pdb
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.csprojResolveAssemblyReference.cache
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormCamion.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormChauffeur.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormClient.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormDevis.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormFacture.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormImprevu.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeAdministratif.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeCamions.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeChauffeur.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeClients.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeFacture.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeImprevu.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormMenu.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.Properties.Resources.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.csproj.GenerateResource.Cache
