@@ -32,7 +32,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
+            dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
             comboBoxImp.DataSource = gestionBdd.request_select("select TypeImprevus from Imprevus");
             comboBoxImp.DisplayMember = "TypeImprevus";
@@ -43,7 +43,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from facture");
+            DataTable donnees = gestionBdd.request_select("select * from Facture");
 
             textBoxNumF.Text = gestionBdd.getField_Datable(donnees, position, 0);
             textBoxNumD.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -77,7 +77,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from facture").Rows.Count - 1)
+            if (position < gestionBdd.request_select("select * from Facture").Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -88,14 +88,14 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from facture").Rows.Count - 1;
+            position = gestionBdd.request_select("select * from Facture").Rows.Count - 1;
 
             refresh_textboxs();
         }
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from facture").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Facture").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -126,7 +126,7 @@ namespace GestionMaxiTour
 
                     string req = "Insert into Facture Values ( null, " + nd + ",'" + df + "'," + ht + "," + tva + "," + ttc + ");";
                     gestionBdd.request_action(req);
-                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
+                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
                     MessageBox.Show("Facture Ajoutée!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -156,7 +156,7 @@ namespace GestionMaxiTour
 
                 string req = "Delete from Facture Where NumFacture = " + nf + ";";
                 gestionBdd.request_action(req);
-                dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
+                dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
                 position = 0;
 
@@ -189,7 +189,7 @@ namespace GestionMaxiTour
 
                     string req = "update Facture Set idDevis= " + nd + ", DateFacture='" + df + "', TotalHT= " + ht + ", TVA= " + tva + ", TotalTTC=" + ttc + " where NumFacture =" + cf + ";";
                     gestionBdd.request_action(req);
-                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
+                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
                     MessageBox.Show("Facture Modifiée!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
