@@ -19,3 +19,12 @@ C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\M
 C:\Users\Eric-PC\Desktop\gestion version\MaxiTour\bin\Debug\MaxiTour.exe.config
 C:\Users\Eric-PC\Desktop\gestion version\MaxiTour\obj\Debug\MaxiTour.exe
 C:\Users\Eric-PC\Desktop\gestion version\MaxiTour\obj\Debug\MaxiTour.pdb
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\bin\Debug\MaxiTour.exe.config
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\bin\Debug\MaxiTour.exe
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\bin\Debug\MaxiTour.pdb
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\bin\Debug\MySql.Data.dll
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\obj\Debug\MaxiTour.csprojResolveAssemblyReference.cache
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\obj\Debug\MaxiTour.Properties.Resources.resources
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\obj\Debug\MaxiTour.csproj.GenerateResource.Cache
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\obj\Debug\MaxiTour.exe
+D:\Users\snaphoo\Documents\Visual Studio 2015\Projects\MaxiTour\MaxiTour\obj\Debug\MaxiTour.pdb

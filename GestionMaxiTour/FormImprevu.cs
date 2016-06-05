@@ -19,6 +19,7 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Imprevus imprevus = new Imprevus();
 
+        string requestImprevus = "SELECT * FROM Imprevus";
         int position = 0;
 
         public FormImprevu()
@@ -36,7 +37,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from Imprevus");
+            DataTable donnees = gestionBdd.request_select(requestImprevus);
 
             identifiant_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             numfacture_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -64,7 +65,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Imprevus").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select(requestImprevus).Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -75,7 +76,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Imprevus").Rows.Count - 1)
+            if (position < gestionBdd.request_select(requestImprevus).Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -86,7 +87,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from Imprevus").Rows.Count - 1;
+            position = gestionBdd.request_select(requestImprevus).Rows.Count - 1;
 
             refresh_textboxs();
         }

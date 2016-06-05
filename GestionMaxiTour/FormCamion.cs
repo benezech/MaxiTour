@@ -38,7 +38,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from camion");
+            DataTable donnees = gestionBdd.request_select("select * from Camion");
 
             idCamion_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             //nom_tb.Text = gestionBdd.getField_Datable(donnees, position, 1); // etat checkbox

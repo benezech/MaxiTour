@@ -18,6 +18,7 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Tournee tournee = new Tournee();
+        string requestTournee = "SELECT * FROM Tournee";
 
         int position = 0;
 
@@ -36,7 +37,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from tournee");
+            DataTable donnees = gestionBdd.request_select(requestTournee);
 
             id_tb.Text = gestionBdd.getField_Datable(donnees, position, 0); // id tournee
             //etat_tb.Text = gestionBdd.getField_Datable(donnees, position, 1); // etat checkbox
@@ -91,7 +92,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from tournee").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select(requestTournee).Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -102,7 +103,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from tournee").Rows.Count - 1)
+            if (position < gestionBdd.request_select(requestTournee).Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -113,7 +114,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from tournee").Rows.Count - 1;
+            position = gestionBdd.request_select(requestTournee).Rows.Count - 1;
 
             refresh_textboxs();
         }

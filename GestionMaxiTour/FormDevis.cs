@@ -18,6 +18,7 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Devis devis = new Devis();
+        string requestDevis = "SELECT * FROM Devis";
 
         int position = 0;
 
@@ -36,7 +37,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from Devis");
+            DataTable donnees = gestionBdd.request_select(requestDevis);
 
             id_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             client_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -117,7 +118,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Devis").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select(requestDevis).Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -130,7 +131,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Devis").Rows.Count - 1)
+            if (position < gestionBdd.request_select(requestDevis).Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -143,7 +144,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from Devis").Rows.Count - 1;
+            position = gestionBdd.request_select(requestDevis).Rows.Count - 1;
 
             refresh_textboxs();
 

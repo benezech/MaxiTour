@@ -21,15 +21,18 @@ namespace GestionMaxiTour
         private string server;
         private string database;
         private string uid;
-      
+        private string password;
+
         public void Connexion()
         {
-            server = "localhost";
-            database = "maxitour6";
-            uid = "root";
+            server = "mysql.montpellier.epsi.fr";
+            database = "maxitourbdd";
+            uid = "ProfesseursAdmin";
+            password = "ProfesseursAdmin";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
-            database + ";" + "UID=" + uid + ";";
+            connectionString = "SERVER=" + server + "; Port = 5206;" + "DATABASE=" +
+            database + ";" + "UID=" + uid + "; Pwd=" + password;
+
 
             Connection = new MySqlConnection(connectionString);
 
