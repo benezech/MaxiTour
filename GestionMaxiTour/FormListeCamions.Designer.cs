@@ -28,62 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonFermer = new System.Windows.Forms.Button();
-            this.labelListeCamion = new System.Windows.Forms.Label();
-            this.dataGridViewListeCamions = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeCamions)).BeginInit();
+            this.dataGridCamion = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCamion)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonFermer
+            // dataGridCamion
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(934, 795);
-            this.buttonFermer.Name = "buttonFermer";
-            this.buttonFermer.Size = new System.Drawing.Size(219, 51);
-            this.buttonFermer.TabIndex = 5;
-            this.buttonFermer.Text = "Fermer";
-            this.buttonFermer.UseVisualStyleBackColor = true;
-            // 
-            // labelListeCamion
-            // 
-            this.labelListeCamion.AutoSize = true;
-            this.labelListeCamion.Location = new System.Drawing.Point(82, 91);
-            this.labelListeCamion.Name = "labelListeCamion";
-            this.labelListeCamion.Size = new System.Drawing.Size(201, 25);
-            this.labelListeCamion.TabIndex = 4;
-            this.labelListeCamion.Text = "Liste des Camions :";
-            // 
-            // dataGridViewListeCamions
-            // 
-            this.dataGridViewListeCamions.AllowUserToAddRows = false;
-            this.dataGridViewListeCamions.AllowUserToDeleteRows = false;
-            this.dataGridViewListeCamions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListeCamions.Location = new System.Drawing.Point(87, 155);
-            this.dataGridViewListeCamions.Name = "dataGridViewListeCamions";
-            this.dataGridViewListeCamions.ReadOnly = true;
-            this.dataGridViewListeCamions.RowTemplate.Height = 33;
-            this.dataGridViewListeCamions.Size = new System.Drawing.Size(1066, 584);
-            this.dataGridViewListeCamions.TabIndex = 3;
+            this.dataGridCamion.AllowUserToAddRows = false;
+            this.dataGridCamion.AllowUserToDeleteRows = false;
+            this.dataGridCamion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCamion.Location = new System.Drawing.Point(11, 22);
+            this.dataGridCamion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridCamion.Name = "dataGridCamion";
+            this.dataGridCamion.ReadOnly = true;
+            this.dataGridCamion.RowTemplate.Height = 33;
+            this.dataGridCamion.Size = new System.Drawing.Size(830, 353);
+            this.dataGridCamion.TabIndex = 3;
             // 
             // FormListeCamions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1202, 885);
-            this.Controls.Add(this.buttonFermer);
-            this.Controls.Add(this.labelListeCamion);
-            this.Controls.Add(this.dataGridViewListeCamions);
+            this.ClientSize = new System.Drawing.Size(852, 401);
+            this.Controls.Add(this.dataGridCamion);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormListeCamions";
             this.Text = "Liste des Camions";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeCamions)).EndInit();
+            this.Load += new System.EventHandler(this.FormListeCamions_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCamion)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonFermer;
-        private System.Windows.Forms.Label labelListeCamion;
-        private System.Windows.Forms.DataGridView dataGridViewListeCamions;
+        private System.Windows.Forms.DataGridView dataGridCamion;
     }
 }

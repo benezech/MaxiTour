@@ -6,23 +6,28 @@ using System.Threading.Tasks;
 
 namespace MaxiTour
 {
-    public class Chauffeur : Employe
+    public class Chauffeur : Personne
     {
+        public string DateEmbauche { get; private set; }
+        public string TypeContrat { get; set; }
+        public double Salaire { get; set; }
+        public double NombreHeure { get; set; }
+
         public List<Tournee> ListeTournee { get; set; }
         public List<Camion> ListeCamion { get; set; }
         public List<TourneePrevi> ListeTourneePrevi { get; set; }
         #region constructeurs
 
-        public Chauffeur (int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, DateTime dateEmbauche, string typeContrat, double salaire, double nbrHeures)
-            : base ( id, nom,  prenom,  numsecu,  adresse,  codepostal,  ville,  telephone,  email,  dateEmbauche,  typeContrat,  salaire, nbrHeures)
+        public Chauffeur (int id, string nom, string prenom, int numsecu, string adresse, int codepostal, string ville, int telephone, string email, string dateEmbauche, string typeContrat, double salaire, double nombreHeure)
+            : base ( id, nom,  prenom,  numsecu,  adresse,  codepostal,  ville,  telephone,  email)
         {
             this.ListeTournee = new List<Tournee>();
             this.ListeCamion = new List<Camion>();
             this.ListeTourneePrevi = new List<TourneePrevi>();
         }
 
-        public Chauffeur(string nom, string prenom,  string typeContrat, double salaire, double nbrHeures)
-            : base(nom, prenom,  typeContrat, salaire, nbrHeures)
+
+        public Chauffeur()
         {
 
         }

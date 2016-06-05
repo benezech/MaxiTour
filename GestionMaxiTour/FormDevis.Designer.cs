@@ -53,6 +53,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.totalkm_tb = new System.Windows.Forms.TextBox();
             this.groupBoxTotaux = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.checkBoxEtat = new System.Windows.Forms.CheckBox();
             this.calcultaxe_tb = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.prixchauffeur_tb = new System.Windows.Forms.TextBox();
@@ -78,7 +80,6 @@
             this.datefin_tb = new System.Windows.Forms.TextBox();
             this.dateTimePickerF = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerD = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.client_tb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -88,9 +89,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.comboBoxClient = new System.Windows.Forms.ComboBox();
             this.btn_listeclients = new System.Windows.Forms.Button();
-            this.checkBoxEtat = new System.Windows.Forms.CheckBox();
             this.groupBoxTotaux.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -226,9 +225,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(302, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 13);
+            this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Kilomètres Effectif";
+            this.label2.Text = "Kilomètres Client";
             // 
             // label3
             // 
@@ -290,6 +289,7 @@
             // 
             // groupBoxTotaux
             // 
+            this.groupBoxTotaux.Controls.Add(this.label15);
             this.groupBoxTotaux.Controls.Add(this.checkBoxEtat);
             this.groupBoxTotaux.Controls.Add(this.calcultaxe_tb);
             this.groupBoxTotaux.Controls.Add(this.label11);
@@ -308,6 +308,25 @@
             this.groupBoxTotaux.TabStop = false;
             this.groupBoxTotaux.Text = "Prix Totaux";
             this.groupBoxTotaux.Enter += new System.EventHandler(this.groupBoxTotaux_Enter);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(23, 334);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(86, 13);
+            this.label15.TabIndex = 63;
+            this.label15.Text = "Bon pour contrat";
+            // 
+            // checkBoxEtat
+            // 
+            this.checkBoxEtat.AutoSize = true;
+            this.checkBoxEtat.Location = new System.Drawing.Point(126, 334);
+            this.checkBoxEtat.Name = "checkBoxEtat";
+            this.checkBoxEtat.Size = new System.Drawing.Size(55, 17);
+            this.checkBoxEtat.TabIndex = 61;
+            this.checkBoxEtat.Text = "Validé";
+            this.checkBoxEtat.UseVisualStyleBackColor = true;
             // 
             // calcultaxe_tb
             // 
@@ -528,27 +547,17 @@
             this.dateTimePickerD.Size = new System.Drawing.Size(238, 20);
             this.dateTimePickerD.TabIndex = 46;
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(26, 86);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(90, 13);
-            this.label15.TabIndex = 47;
-            this.label15.Text = "Assigner un client";
-            // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(30, 56);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(33, 13);
+            this.label16.Size = new System.Drawing.Size(73, 13);
             this.label16.TabIndex = 49;
-            this.label16.Text = "Client";
+            this.label16.Text = "Numéro Client";
             // 
             // client_tb
             // 
-            this.client_tb.Enabled = false;
             this.client_tb.Location = new System.Drawing.Point(150, 56);
             this.client_tb.Name = "client_tb";
             this.client_tb.Size = new System.Drawing.Size(120, 20);
@@ -615,17 +624,9 @@
             this.label22.TabIndex = 58;
             this.label22.Text = "Kms";
             // 
-            // comboBoxClient
-            // 
-            this.comboBoxClient.FormattingEnabled = true;
-            this.comboBoxClient.Location = new System.Drawing.Point(149, 86);
-            this.comboBoxClient.Name = "comboBoxClient";
-            this.comboBoxClient.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxClient.TabIndex = 59;
-            // 
             // btn_listeclients
             // 
-            this.btn_listeclients.Location = new System.Drawing.Point(151, 113);
+            this.btn_listeclients.Location = new System.Drawing.Point(152, 101);
             this.btn_listeclients.Name = "btn_listeclients";
             this.btn_listeclients.Size = new System.Drawing.Size(116, 23);
             this.btn_listeclients.TabIndex = 60;
@@ -633,23 +634,12 @@
             this.btn_listeclients.UseVisualStyleBackColor = true;
             this.btn_listeclients.Click += new System.EventHandler(this.btn_listeclients_Click);
             // 
-            // checkBoxEtat
-            // 
-            this.checkBoxEtat.AutoSize = true;
-            this.checkBoxEtat.Location = new System.Drawing.Point(138, 341);
-            this.checkBoxEtat.Name = "checkBoxEtat";
-            this.checkBoxEtat.Size = new System.Drawing.Size(72, 17);
-            this.checkBoxEtat.TabIndex = 61;
-            this.checkBoxEtat.Text = "Validation";
-            this.checkBoxEtat.UseVisualStyleBackColor = true;
-            // 
             // FormDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(893, 460);
             this.Controls.Add(this.btn_listeclients);
-            this.Controls.Add(this.comboBoxClient);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
@@ -659,7 +649,6 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.client_tb);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.dateTimePickerD);
             this.Controls.Add(this.dateTimePickerF);
             this.Controls.Add(this.datefin_tb);
@@ -760,7 +749,6 @@
         private System.Windows.Forms.TextBox datefin_tb;
         private System.Windows.Forms.DateTimePicker dateTimePickerF;
         private System.Windows.Forms.DateTimePicker dateTimePickerD;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox client_tb;
         private System.Windows.Forms.TextBox calcultaxe_tb;
@@ -772,8 +760,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.ComboBox comboBoxClient;
         private System.Windows.Forms.Button btn_listeclients;
         private System.Windows.Forms.CheckBox checkBoxEtat;
+        private System.Windows.Forms.Label label15;
     }
 }

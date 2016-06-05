@@ -14,21 +14,21 @@ using MySql.Data.MySqlClient;
 
 namespace GestionMaxiTour
 {
-    public partial class FormListeFacture : Form
+    public partial class FormListeTournees : Form
     {
         GestionBDD gestionBdd = new GestionBDD();
-        Facture facture = new Facture();
+        Tournee camion = new Tournee();
 
-        public FormListeFacture()
+        public FormListeTournees()
         {
             InitializeComponent();
         }
 
-        private void FormListeFacture_Load(object sender, EventArgs e)
+        private void FormListeTournees_Load(object sender, EventArgs e)
         {
             gestionBdd.Connexion();
 
-            dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
+            dataGridTournee.DataSource = gestionBdd.request_select("SELECT * FROM Tournee");
         }
     }
 }

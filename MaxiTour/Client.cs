@@ -12,7 +12,6 @@ namespace MaxiTour
         public int Siret { get; private set; }
         public string CodeNaf { get; private set; }
         public Devis DevisClient { get; set; }
-        public Dirigeant ContactClient { get; set; }
 
         public string detailClient
         {

@@ -84,12 +84,6 @@
     <Compile Include="FormImprevu.Designer.cs">
       <DependentUpon>FormImprevu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormListeAdministratif.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormListeAdministratif.Designer.cs">
-      <DependentUpon>FormListeAdministratif.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormListeCamions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,11 +120,23 @@
     <Compile Include="FormListeImprevu.Designer.cs">
       <DependentUpon>FormListeImprevu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormListeTournees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListeTournees.Designer.cs">
+      <DependentUpon>FormListeTournees.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTournee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTournee.Designer.cs">
+      <DependentUpon>FormTournee.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionBDD.cs" />
     <Compile Include="Program.cs" />
@@ -153,9 +159,6 @@
     <EmbeddedResource Include="FormImprevu.resx">
       <DependentUpon>FormImprevu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormListeAdministratif.resx">
-      <DependentUpon>FormListeAdministratif.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormListeCamions.resx">
       <DependentUpon>FormListeCamions.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,8 +177,14 @@
     <EmbeddedResource Include="FormListeImprevu.resx">
       <DependentUpon>FormListeImprevu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormListeTournees.resx">
+      <DependentUpon>FormListeTournees.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTournee.resx">
+      <DependentUpon>FormTournee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

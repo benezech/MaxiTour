@@ -89,7 +89,7 @@ namespace MaxiTour
             return kmTotal;
         }
 
-        public double sousTotalPrixVehicule()
+       /* public double sousTotalPrixVehicule()
         {
             double total;
 
@@ -97,18 +97,18 @@ namespace MaxiTour
 
             return total;
 
-        }
+        }*/
 
-        public double sousTotalPrixKm()
+        /*public double sousTotalPrixKm()
         {
             double total;
 
             total = (prixAuKm() * KmClient) + PrixPeage;
-            /* (( consoCamion  / 100 ) * prixCarburant ) * KmClient ) + péage */
+            
 
             return total;
 
-        }
+        }*/
 
         public double sousTotalPrixChauffeur()
         {
@@ -121,20 +121,20 @@ namespace MaxiTour
 
         }
 
-        public double TotalCout()
+        /*public double TotalCout()
         {
             double total = this.sousTotalPrixChauffeur() + this.sousTotalPrixKm() + this.sousTotalPrixVehicule();
             return total;
-        }
+        }*/
 
-        public double CalculFacturation()
+        /*public double CalculFacturation()
         {
             double Factu = this.TotalCout();
             return Factu;
-        }
+        }*/
 
 
-        public double prixAuKm()
+       /* public double prixAuKm()
         {
 
             double consoCamion = 0;
@@ -163,7 +163,7 @@ namespace MaxiTour
             }
 
             return consoCamion;
-        }
+        }*/
 
         public int getClientId()
         {

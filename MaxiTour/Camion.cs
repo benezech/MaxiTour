@@ -11,75 +11,71 @@ namespace MaxiTour
 
         #region GetSet
         public int Id { get; private set; }
-        public string Marque { get; private set; }
+        public string Etat { get; set; }
         public string Immatriculation { get; private set; }
-        public bool Etat { get; set; }
         public double Km { get; set; }
         public string Modele { get; private set; }
+        public string Marque { get; private set; }
         public double Consommation { get; set; }
         public string Carburant { get; set; }
-        public DateTime DateAchat { get; private set; }
-        public DateTime DateCirculation { get; private set; }
-        public bool Hayon { get; set; }
-        public int HayonPuissance { get; set; }
-        public string Type { get; set; }
-        public double Poid { get; private set; }
-        public double LongueurExtRem { get; private set; }
-        public double HauteurExtRem { get; private set; }
-        public double LargeurExtRem { get; private set; }
+        public string DateAchat { get; private set; }
+        public string DateCirculation { get; private set; }
+        public string Hayon { get; set; }
+        public string PoidVide { get; set; }
+        public double PoidTAC { get; private set; }
         public double LongueurIntRem { get; private set; }
-        public double HauteurIntRem { get; private set; }
         public double LargeurIntRem { get; private set; }
+        public double HauteurIntRem { get; private set; }
+
         public List<Chauffeur> ListeChauffeur = new List<Chauffeur>();
         public List<Client> ListeClient = new List<Client>();
         public List<Tournee> ListeTournee = new List<Tournee>();
         #endregion
 
         #region Constructeur
-        public Camion(string immat, string marque, bool etat, double km, string modele, double conso, string carbu, DateTime dateAchat, DateTime dateCirculation, bool hayon, int hayonPuissance, string type, double longueurExtRem, double hauteurExtRem, double largeurExtRem, double longueurIntRem, double hauteurIntRem, double largeurIntRem)
+        public Camion(int id, string etat, string immat, double km, string modele, string marque, double conso, string carbu, string dateAchat, string dateCirculation, string hayon, string poidVide, double poidTAC,  double longueurIntRem, double largeurIntRem, double hauteurIntRem)
         {
-            Immatriculation = immat;
-            Marque = marque;
+            Id = id;
             Etat = etat;
+            Immatriculation = immat;
             Km = km;
             Modele = modele;
+            Marque = marque;
             Consommation = conso;
             Carburant = carbu;
             DateAchat = dateAchat;
+            DateCirculation = dateCirculation;
             Hayon = hayon;
-            HayonPuissance = hayonPuissance;
-            Type = type;
-            LongueurExtRem = longueurExtRem;
-            HauteurExtRem = hauteurExtRem;
-            LargeurExtRem = largeurExtRem;
+            PoidVide = poidVide;
+            PoidTAC = poidTAC;
             LongueurIntRem = longueurIntRem;
             HauteurIntRem = hauteurIntRem;
             LargeurIntRem = largeurIntRem;
         }
 
-        public Camion(string immat, string marque, bool etat)
+
+        public Camion()
         {
-            Immatriculation = immat;
-            Marque = marque;
-            Etat = etat;
+
         }
+
         #endregion
         
         #region Fonction
-        public int AgeCamion()
+        /*public int AgeCamion()
         {
             int age = DateTime.Now.Year - DateAchat.Year;
             return age;
-        }
+        }*/
 
 
-        public double calculVolume()
+        public double calculVolume( double longueur, double largeur, double hauteur)
         {
-            double volumeTotal = LongueurIntRem * HauteurIntRem * LargeurIntRem;
+            double volumeTotal = longueur * largeur * hauteur;
             return volumeTotal;
         }
 
-        public double calculVolumeLibre()
+       /* public double calculVolumeLibre()
         {
 
             double VolumeLibre = 0;
@@ -109,7 +105,7 @@ namespace MaxiTour
 
             return VolumeLibre;
 
-        }
+        }*/
         #endregion
 
     }

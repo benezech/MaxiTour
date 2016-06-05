@@ -45,6 +45,7 @@
             this.buttonFermer = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.identifiant_tb = new System.Windows.Forms.TextBox();
+            this.btn_imprevus = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelType
@@ -176,7 +177,7 @@
             // 
             // buttonFermer
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(138, 203);
+            this.buttonFermer.Location = new System.Drawing.Point(194, 206);
             this.buttonFermer.Name = "buttonFermer";
             this.buttonFermer.Size = new System.Drawing.Size(75, 23);
             this.buttonFermer.TabIndex = 14;
@@ -201,11 +202,22 @@
             this.identifiant_tb.Size = new System.Drawing.Size(190, 20);
             this.identifiant_tb.TabIndex = 16;
             // 
+            // btn_imprevus
+            // 
+            this.btn_imprevus.Location = new System.Drawing.Point(54, 206);
+            this.btn_imprevus.Name = "btn_imprevus";
+            this.btn_imprevus.Size = new System.Drawing.Size(117, 23);
+            this.btn_imprevus.TabIndex = 17;
+            this.btn_imprevus.Text = "liste Imprévus";
+            this.btn_imprevus.UseVisualStyleBackColor = true;
+            this.btn_imprevus.Click += new System.EventHandler(this.btn_imprevus_Click);
+            // 
             // FormImprevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 241);
+            this.Controls.Add(this.btn_imprevus);
             this.Controls.Add(this.identifiant_tb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonFermer);
@@ -250,5 +262,6 @@
         private System.Windows.Forms.Button buttonFermer;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox identifiant_tb;
+        private System.Windows.Forms.Button btn_imprevus;
     }
 }

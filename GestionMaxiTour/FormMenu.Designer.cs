@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.factureTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.devisTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.tourneeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.devisToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.factureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
+            this.factureTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.devisTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.imprevusTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.chauffeurTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.camionTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,52 +47,64 @@
             this.factureTSMI,
             this.devisTSMI,
             this.imprevusTSMI,
-            this.toolStripTextBox1});
+            this.clientTSMI,
+            this.chauffeurTSMI,
+            this.camionTSMI});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(458, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(452, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // tourneeToolStripMenuItem
+            // 
+            this.tourneeToolStripMenuItem.Name = "tourneeToolStripMenuItem";
+            this.tourneeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.tourneeToolStripMenuItem.Text = "Tournées";
+            this.tourneeToolStripMenuItem.Click += new System.EventHandler(this.tourneeToolStripMenuItem_Click);
             // 
             // factureTSMI
             // 
             this.factureTSMI.Name = "factureTSMI";
-            this.factureTSMI.Size = new System.Drawing.Size(63, 23);
+            this.factureTSMI.Size = new System.Drawing.Size(63, 20);
             this.factureTSMI.Text = "Factures";
             this.factureTSMI.Click += new System.EventHandler(this.factureTSMI_Click);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
             // 
             // devisTSMI
             // 
             this.devisTSMI.Name = "devisTSMI";
-            this.devisTSMI.Size = new System.Drawing.Size(47, 23);
+            this.devisTSMI.Size = new System.Drawing.Size(47, 20);
             this.devisTSMI.Text = "Devis";
             this.devisTSMI.Click += new System.EventHandler(this.devisTSMI_Click);
             // 
-            // tourneeToolStripMenuItem
+            // imprevusTSMI
             // 
-            this.tourneeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.devisToolStripMenuItem1,
-            this.factureToolStripMenuItem});
-            this.tourneeToolStripMenuItem.Name = "tourneeToolStripMenuItem";
-            this.tourneeToolStripMenuItem.Size = new System.Drawing.Size(68, 23);
-            this.tourneeToolStripMenuItem.Text = "Tournées";
+            this.imprevusTSMI.Name = "imprevusTSMI";
+            this.imprevusTSMI.Size = new System.Drawing.Size(68, 20);
+            this.imprevusTSMI.Text = "Imprévus";
+            this.imprevusTSMI.Click += new System.EventHandler(this.imprevusTSMI_Click);
             // 
-            // devisToolStripMenuItem1
+            // clientTSMI
             // 
-            this.devisToolStripMenuItem1.Name = "devisToolStripMenuItem1";
-            this.devisToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.devisToolStripMenuItem1.Text = "Devis";
+            this.clientTSMI.Name = "clientTSMI";
+            this.clientTSMI.Size = new System.Drawing.Size(50, 20);
+            this.clientTSMI.Text = "Client";
+            this.clientTSMI.Click += new System.EventHandler(this.clientTSMI_Click);
             // 
-            // factureToolStripMenuItem
+            // chauffeurTSMI
             // 
-            this.factureToolStripMenuItem.Name = "factureToolStripMenuItem";
-            this.factureToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.factureToolStripMenuItem.Text = "Factures";
+            this.chauffeurTSMI.Name = "chauffeurTSMI";
+            this.chauffeurTSMI.Size = new System.Drawing.Size(72, 20);
+            this.chauffeurTSMI.Text = "Chauffeur";
+            this.chauffeurTSMI.Click += new System.EventHandler(this.chauffeurTSMI_Click);
+            // 
+            // camionTSMI
+            // 
+            this.camionTSMI.Name = "camionTSMI";
+            this.camionTSMI.Size = new System.Drawing.Size(61, 20);
+            this.camionTSMI.Text = "Camion";
+            this.camionTSMI.Click += new System.EventHandler(this.camionTSMI_Click);
             // 
             // label1
             // 
@@ -103,18 +115,11 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Bienvenue sur MaxiTour";
             // 
-            // imprevusTSMI
-            // 
-            this.imprevusTSMI.Name = "imprevusTSMI";
-            this.imprevusTSMI.Size = new System.Drawing.Size(68, 23);
-            this.imprevusTSMI.Text = "Imprévus";
-            this.imprevusTSMI.Click += new System.EventHandler(this.imprevusTSMI_Click);
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 125);
+            this.ClientSize = new System.Drawing.Size(452, 125);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -132,13 +137,13 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem factureTSMI;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripMenuItem tourneeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem devisToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem factureToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devisTSMI;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem imprevusTSMI;
+        private System.Windows.Forms.ToolStripMenuItem clientTSMI;
+        private System.Windows.Forms.ToolStripMenuItem chauffeurTSMI;
+        private System.Windows.Forms.ToolStripMenuItem camionTSMI;
 
     }
 }

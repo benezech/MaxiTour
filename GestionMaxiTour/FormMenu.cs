@@ -42,5 +42,36 @@ namespace GestionMaxiTour
             fimprevu.ShowDialog();
 
         }
+
+        private void clientTSMI_Click(object sender, EventArgs e)
+        {
+            FormClient fclient = new FormClient();
+            fclient.ShowDialog();
+        }
+
+        private void chauffeurTSMI_Click(object sender, EventArgs e)
+        {
+            FormChauffeur fchauffeur = new FormChauffeur();
+            fchauffeur.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void camionTSMI_Click(object sender, EventArgs e)
+        {
+            FormCamion fcamion = new FormCamion();
+            fcamion.ShowDialog();
+
+        }
+
+        private void tourneeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTournee ftournee = new FormTournee();
+            ftournee.ShowDialog();
+
+        }
     }
 }

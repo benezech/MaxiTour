@@ -30,9 +30,6 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            comboBoxClient.DataSource = gestionBdd.request_select("select idClient from Client");
-            comboBoxClient.DisplayMember = "idClient";
-
             refresh_textboxs();
 
         }
@@ -43,22 +40,36 @@ namespace GestionMaxiTour
 
             id_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             client_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
-            prixpeage_tb.Text = gestionBdd.getField_Datable(donnees, position, 4);
-            prixcarburant_tb.Text = gestionBdd.getField_Datable(donnees, position, 5);
-            prixmaint_tb.Text = gestionBdd.getField_Datable(donnees, position, 6);
-            prixassur_tb.Text = gestionBdd.getField_Datable(donnees, position, 7);
-            fraisemploye_tb.Text = gestionBdd.getField_Datable(donnees, position, 8);
-            calcultaxe_tb.Text = gestionBdd.getField_Datable(donnees, position, 9);
-            ammort_tb.Text = gestionBdd.getField_Datable(donnees, position, 10);
-            ressource_tb.Text = gestionBdd.getField_Datable(donnees, position, 11);
-            kmclient_tb.Text = gestionBdd.getField_Datable(donnees, position, 12);
-            kmallee_tb.Text = gestionBdd.getField_Datable(donnees, position, 13);
-            kmretour_tb.Text = gestionBdd.getField_Datable(donnees, position, 14);
-            volumemarchandise_tb.Text = gestionBdd.getField_Datable(donnees, position, 15);
-            datedebut_tb.Text = gestionBdd.getField_Datable(donnees, position, 16);
-            datefin_tb.Text = gestionBdd.getField_Datable(donnees, position, 17);
+            //contrat_tb.Text = gestionBdd.getField_Datable(donnees, position, 2);
+            prixpeage_tb.Text = gestionBdd.getField_Datable(donnees, position, 3);
+            prixcarburant_tb.Text = gestionBdd.getField_Datable(donnees, position, 4);
+            prixmaint_tb.Text = gestionBdd.getField_Datable(donnees, position, 5);
+            prixassur_tb.Text = gestionBdd.getField_Datable(donnees, position, 6);
+            fraisemploye_tb.Text = gestionBdd.getField_Datable(donnees, position, 7);
+            calcultaxe_tb.Text = gestionBdd.getField_Datable(donnees, position, 8);
+            ammort_tb.Text = gestionBdd.getField_Datable(donnees, position, 9);
+            ressource_tb.Text = gestionBdd.getField_Datable(donnees, position, 10);
+            kmclient_tb.Text = gestionBdd.getField_Datable(donnees, position, 11);
+            kmallee_tb.Text = gestionBdd.getField_Datable(donnees, position, 12);
+            kmretour_tb.Text = gestionBdd.getField_Datable(donnees, position, 13);
+            volumemarchandise_tb.Text = gestionBdd.getField_Datable(donnees, position, 14);
+            datedebut_tb.Text = gestionBdd.getField_Datable(donnees, position, 15);
+            datefin_tb.Text = gestionBdd.getField_Datable(donnees, position, 16);
+
+            string etat = gestionBdd.getField_Datable(donnees, position, 2);
+
+            if (etat == "check")
+            {
+                checkBoxEtat.Checked = true;
+
+            }
+            else
+            {
+                checkBoxEtat.Checked = false;
+            }
 
         }
+
 
         public void initialize_textboxs()
         {
@@ -98,8 +109,10 @@ namespace GestionMaxiTour
             position = 0;
 
             refresh_textboxs();
+               
+            calcul_textboxs();
 
-            //calcul_textboxs();
+            
         }
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
@@ -112,7 +125,7 @@ namespace GestionMaxiTour
 
             refresh_textboxs();
 
-            //calcul_textboxs();
+            calcul_textboxs();
         }
 
         private void buttonSuivant_Click(object sender, EventArgs e)
@@ -125,7 +138,7 @@ namespace GestionMaxiTour
 
             refresh_textboxs();
 
-            //calcul_textboxs();
+            calcul_textboxs();
         }
 
         private void buttonFin_Click(object sender, EventArgs e)
@@ -134,7 +147,7 @@ namespace GestionMaxiTour
 
             refresh_textboxs();
 
-            //calcul_textboxs();
+            calcul_textboxs();
         }
 
         private void buttonFermer_Click(object sender, EventArgs e)
@@ -145,17 +158,28 @@ namespace GestionMaxiTour
         public void calcul_textboxs()
         {
 
-            double kmt = devis.kmTotal(Convert.ToDouble(this.kmclient_tb.Text), Convert.ToDouble(this.kmallee_tb.Text), Convert.ToDouble(this.kmretour_tb.Text));
-            double pk = devis.prixAuKm();
+            double kt = devis.kmTotal(Convert.ToDouble(this.kmclient_tb.Text), Convert.ToDouble(this.kmallee_tb.Text), Convert.ToDouble(this.kmretour_tb.Text));
+            //double pk = devis.prixAuKm();
             //double pv = prix véhicule;
             //double pc = prix chauffeur ( faire un foreach jusqu'à chauffeur);
            //double pt = prix total;
+            
+           
+            double pk = 3000;
+            double pv = 5000;
+            double pc = 7000;
+            //double ct = 400;
+            double pt = 700;
+            //double kt = 300;
 
-            prixaukm_tb.Text = Convert.ToString(kmt);
-            prixvehicule_tb.Text = Convert.ToString(pk); ;
-            //prixchauffeur_tb.Text = Convert.ToString(pv); ;
+            prixaukm_tb.Text = Convert.ToString(pk);
+            prixvehicule_tb.Text = Convert.ToString(pv);
+            prixchauffeur_tb.Text = Convert.ToString(pc); ;
             //calcultaxe_tb.Text = Convert.ToString(pc); ;
-            //total_tb.Text = Convert.ToString(pt);
+            total_tb.Text = Convert.ToString(pt);
+            totalkm_tb.Text = Convert.ToString(kt);
+
+        
 
         }
 
@@ -170,7 +194,7 @@ namespace GestionMaxiTour
 
 
            else
-                if (this.client_tb.Text != null &&  this.prixpeage_tb.Text != null && this.prixcarburant_tb != null 
+                if (this.client_tb.Text != null &&  this.prixpeage_tb.Text != null && this.prixcarburant_tb.Text != null 
                     && this.prixmaint_tb.Text != null && this.prixassur_tb.Text != null && this.fraisemploye_tb.Text != null 
                     && this.ammort_tb.Text != null && this.ressource_tb.Text!= null && this.kmclient_tb.Text != null
                     && this.kmallee_tb.Text != null && this.prixvehicule_tb.Text != null && this.volumemarchandise_tb.Text != null
@@ -180,25 +204,23 @@ namespace GestionMaxiTour
                 {
                     int nc = Int32.Parse(this.client_tb.Text);
                     string etat = Convert.ToString(checkBoxEtat.CheckState);
-                    double pp = Convert.ToDouble(this.prixpeage_tb.Text);
-                    double pc = Convert.ToDouble(this.prixcarburant_tb.Text);
-                    double pm = Convert.ToDouble(this.prixmaint_tb.Text);
-                    double pa = Convert.ToDouble(this.prixassur_tb.Text);
-                    double fe = Convert.ToDouble(this.fraisemploye_tb.Text);
-                    double am = Convert.ToDouble(this.ammort_tb.Text);
+                    string pp = this.prixpeage_tb.Text;
+                    string pc = this.prixcarburant_tb.Text;
+                    string pm = this.prixmaint_tb.Text;
+                    string pa = this.prixassur_tb.Text;
+                    string fe = this.fraisemploye_tb.Text;
+                    double ct = 2000; //calcultaxe_tb taxe
+                    string am = this.ammort_tb.Text;
                     string ress = ressource_tb.Text;
-                    double kc = Convert.ToDouble(this.kmclient_tb.Text);
-                    double ka = Convert.ToDouble(this.kmallee_tb.Text);
-                    double kr = Convert.ToDouble(this.kmretour_tb.Text);
-                    double vm = Convert.ToDouble(this.volumemarchandise_tb.Text);
+                    string kc = this.kmclient_tb.Text;
+                    string ka = this.kmallee_tb.Text;
+                    string kr = this.kmretour_tb.Text;
+                    string vm = this.volumemarchandise_tb.Text;
                     string ddebut = Convert.ToString(this.dateTimePickerD.Text);
                     string dfin = Convert.ToString(this.dateTimePickerF.Text);
-                    //double ct = calcultaxe_tb taxe;
+                    
 
-                    int dir = 1; /*----- Enlever la table dirigeant plus tard-------*/
-          
-
-                    string req = "Insert into Devis Values ( null, " + nc + ",'" + etat + "'," + pp + "," + dir + ");";
+                    string req = "Insert into Devis Values ( null," + nc + ",'" + etat + "'," + pp + "," + pc + "," + pm + "," + pa + "," + fe + "," + ct + "," + am + ",'" + ress + "'," + kc + "," + ka + "," + kr + "," + vm + ",'" + ddebut + "','" + dfin + "');";
                     gestionBdd.request_action(req);
 
                     MessageBox.Show("Devis Ajouté!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);

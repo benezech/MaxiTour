@@ -28,46 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.labelListeImprevu = new System.Windows.Forms.Label();
-            this.dataGridViewListeImprevu = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeImprevu)).BeginInit();
+            this.dataGridImprevus = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridImprevus)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelListeImprevu
+            // dataGridImprevus
             // 
-            this.labelListeImprevu.AutoSize = true;
-            this.labelListeImprevu.Location = new System.Drawing.Point(12, 9);
-            this.labelListeImprevu.Name = "labelListeImprevu";
-            this.labelListeImprevu.Size = new System.Drawing.Size(45, 13);
-            this.labelListeImprevu.TabIndex = 0;
-            this.labelListeImprevu.Text = "Imprevu";
-            // 
-            // dataGridViewListeImprevu
-            // 
-            this.dataGridViewListeImprevu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewListeImprevu.Location = new System.Drawing.Point(12, 25);
-            this.dataGridViewListeImprevu.Name = "dataGridViewListeImprevu";
-            this.dataGridViewListeImprevu.Size = new System.Drawing.Size(240, 150);
-            this.dataGridViewListeImprevu.TabIndex = 1;
+            this.dataGridImprevus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridImprevus.Location = new System.Drawing.Point(12, 25);
+            this.dataGridImprevus.Name = "dataGridImprevus";
+            this.dataGridImprevus.Size = new System.Drawing.Size(440, 272);
+            this.dataGridImprevus.TabIndex = 1;
             // 
             // FormListeImprevu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(265, 185);
-            this.Controls.Add(this.dataGridViewListeImprevu);
-            this.Controls.Add(this.labelListeImprevu);
+            this.ClientSize = new System.Drawing.Size(464, 309);
+            this.Controls.Add(this.dataGridImprevus);
             this.Name = "FormListeImprevu";
             this.Text = "ListeImprevu";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListeImprevu)).EndInit();
+            this.Load += new System.EventHandler(this.FormListeImprevu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridImprevus)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label labelListeImprevu;
-        private System.Windows.Forms.DataGridView dataGridViewListeImprevu;
+        private System.Windows.Forms.DataGridView dataGridImprevus;
     }
 }

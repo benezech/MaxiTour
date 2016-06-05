@@ -188,12 +188,12 @@
             this.dataGridFacture.Location = new System.Drawing.Point(410, 27);
             this.dataGridFacture.Name = "dataGridFacture";
             this.dataGridFacture.ReadOnly = true;
-            this.dataGridFacture.Size = new System.Drawing.Size(633, 308);
+            this.dataGridFacture.Size = new System.Drawing.Size(444, 308);
             this.dataGridFacture.TabIndex = 15;
             // 
             // buttonDebut
             // 
-            this.buttonDebut.Location = new System.Drawing.Point(24, 315);
+            this.buttonDebut.Location = new System.Drawing.Point(19, 315);
             this.buttonDebut.Name = "buttonDebut";
             this.buttonDebut.Size = new System.Drawing.Size(37, 23);
             this.buttonDebut.TabIndex = 16;
@@ -203,7 +203,7 @@
             // 
             // buttonPrecedent
             // 
-            this.buttonPrecedent.Location = new System.Drawing.Point(67, 315);
+            this.buttonPrecedent.Location = new System.Drawing.Point(62, 315);
             this.buttonPrecedent.Name = "buttonPrecedent";
             this.buttonPrecedent.Size = new System.Drawing.Size(37, 23);
             this.buttonPrecedent.TabIndex = 17;
@@ -213,7 +213,7 @@
             // 
             // buttonSuivant
             // 
-            this.buttonSuivant.Location = new System.Drawing.Point(111, 315);
+            this.buttonSuivant.Location = new System.Drawing.Point(104, 315);
             this.buttonSuivant.Name = "buttonSuivant";
             this.buttonSuivant.Size = new System.Drawing.Size(37, 23);
             this.buttonSuivant.TabIndex = 18;
@@ -223,7 +223,7 @@
             // 
             // buttonFin
             // 
-            this.buttonFin.Location = new System.Drawing.Point(160, 315);
+            this.buttonFin.Location = new System.Drawing.Point(147, 315);
             this.buttonFin.Name = "buttonFin";
             this.buttonFin.Size = new System.Drawing.Size(37, 23);
             this.buttonFin.TabIndex = 19;
@@ -302,7 +302,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1070, 409);
+            this.ClientSize = new System.Drawing.Size(866, 409);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);

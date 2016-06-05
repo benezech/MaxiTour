@@ -21,7 +21,8 @@ namespace MaxiTour
             this.ListeTournee = new List<Tournee>();
         }
 
-        public double kmTotal(double kmc, double kma, double kmr)
+
+        public double kmTotalC(double kmc, double kma, double kmr)
         {
             double kmTotal;
             kmTotal = kmc + kma + kmr;

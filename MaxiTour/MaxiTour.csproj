@@ -48,14 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administratif.cs" />
     <Compile Include="Camion.cs" />
     <Compile Include="Chauffeur.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Contrat.cs" />
     <Compile Include="Devis.cs" />
-    <Compile Include="Dirigeant.cs" />
-    <Compile Include="Employe.cs" />
     <Compile Include="Facture.cs" />
     <Compile Include="Imprevus.cs" />
     <Compile Include="Personne.cs" />

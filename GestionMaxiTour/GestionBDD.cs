@@ -25,7 +25,7 @@ namespace GestionMaxiTour
         public void Connexion()
         {
             server = "localhost";
-            database = "maxitour";
+            database = "maxitour6";
             uid = "root";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +

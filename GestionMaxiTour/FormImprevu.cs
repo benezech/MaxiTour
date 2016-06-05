@@ -188,5 +188,11 @@ namespace GestionMaxiTour
                 }    
        
         }
+
+        private void btn_imprevus_Click(object sender, EventArgs e)
+        {
+            FormListeImprevu listeimprevus = new FormListeImprevu();
+            listeimprevus.ShowDialog(); 
+        }
     }
 }

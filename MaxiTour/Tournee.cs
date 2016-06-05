@@ -17,12 +17,17 @@ namespace MaxiTour
         #endregion
 
         #region Constructeur
-        public Tournee(bool etat, double duree, string intituleLiaison, string typeLiaison, string depart, string destination, double frequence)
-           : base  (etat, duree, intituleLiaison, typeLiaison, depart, destination, frequence)
+        public Tournee(int id, string etat, double duree, string intituleLiaison, string depart, string arrivee, int frequence, int periodicite, int nparjour)
+           : base  (id, etat, duree, intituleLiaison,  depart, arrivee, frequence, periodicite, nparjour)
         {
             this.ListeChauffeur = new List<Chauffeur>();
             this.ListeCamion = new List<Camion>();
            
+        }
+
+        public Tournee()
+        {
+
         }
 
 

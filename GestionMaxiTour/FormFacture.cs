@@ -39,6 +39,8 @@ namespace GestionMaxiTour
 
 
             refresh_textboxs();
+
+            calcul_textboxs();
         }
 
         public void refresh_textboxs()
@@ -48,9 +50,7 @@ namespace GestionMaxiTour
             textBoxNumF.Text = gestionBdd.getField_Datable(donnees, position, 0);
             textBoxNumD.Text = gestionBdd.getField_Datable(donnees, position, 1);
             textBoxDateF.Text = gestionBdd.getField_Datable(donnees, position, 2);
-            textBoxHT.Text = gestionBdd.getField_Datable(donnees, position, 3);
-            textBoxTVA.Text = gestionBdd.getField_Datable(donnees, position, 4);
-            textBoxTTC.Text = gestionBdd.getField_Datable(donnees, position, 5);
+            textBoxTTC.Text = gestionBdd.getField_Datable(donnees, position, 3);
 
 
         }
@@ -68,11 +68,23 @@ namespace GestionMaxiTour
 
         }
 
+        public void calcul_textboxs()
+        {
+            double tva = facture.calculTVA(Convert.ToDouble(this.textBoxTTC.Text));
+            double ht = facture.calculHT(Convert.ToDouble(this.textBoxTTC.Text), tva);
+
+            textBoxTVA.Text = Convert.ToString(tva);
+            textBoxHT.Text = Convert.ToString(ht);
+        
+        }
+
         private void buttonDebut_Click(object sender, EventArgs e)
         {
             position = 0;
 
             refresh_textboxs();
+
+            calcul_textboxs();
         }
 
         private void buttonSuivant_Click(object sender, EventArgs e)
@@ -84,6 +96,8 @@ namespace GestionMaxiTour
             }
 
             refresh_textboxs();
+
+            calcul_textboxs();
         }
 
         private void buttonFin_Click(object sender, EventArgs e)
@@ -91,6 +105,8 @@ namespace GestionMaxiTour
             position = gestionBdd.request_select("select * from facture").Rows.Count - 1;
 
             refresh_textboxs();
+
+            calcul_textboxs();
         }
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
@@ -102,6 +118,8 @@ namespace GestionMaxiTour
             }
 
             refresh_textboxs();
+
+            calcul_textboxs();
         }
 
         private void buttonAjout_Click(object sender, EventArgs e)
@@ -115,22 +133,22 @@ namespace GestionMaxiTour
 
 
             else
-                if (this.textBoxNumD != null && this.textBoxDateF != null && this.textBoxHT != null
-                    && this.textBoxTVA != null && this.textBoxTTC != null)
+                if (this.textBoxNumD != null && this.textBoxDateF != null && this.textBoxTTC != null)
                 {
                     int nd = Int32.Parse(this.textBoxNumD.Text);
                     string df = Convert.ToString(this.dateTimePickerF.Text);
-                    double ttc = Convert.ToDouble(this.textBoxTTC.Text);
-                    double tva = facture.calculTVA(Convert.ToDouble(this.textBoxTTC.Text));
-                    double ht = facture.calculHT(Convert.ToDouble(this.textBoxTTC.Text), tva);
+                    string ttc = this.textBoxTTC.Text;
+                 
 
-                    string req = "Insert into Facture Values ( null, " + nd + ",'" + df + "'," + ht + "," + tva + "," + ttc + ");";
+                    string req = "Insert into Facture Values ( null, " + nd + ",'" + df + "'," + ttc + ");";
                     gestionBdd.request_action(req);
                     dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
 
                     MessageBox.Show("Facture Ajoutée!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     refresh_textboxs();
+
+                    calcul_textboxs();
 
                     this.buttonAjout.Text = "+";
 
@@ -162,6 +180,8 @@ namespace GestionMaxiTour
 
                 refresh_textboxs();
 
+                calcul_textboxs();
+
                 this.buttonSupprim.Text = "-";
 
                 MessageBox.Show("Facture Supprimée!", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -170,30 +190,23 @@ namespace GestionMaxiTour
 
         private void buttonModif_Click(object sender, EventArgs e)
         {
-            if (this.buttonModif.Text == "mod")
-            {
-                this.buttonModif.Text = "Modif";
-            }
 
-
-            else
-                if (this.textBoxNumD != null && this.textBoxDateF != null && this.textBoxHT != null
-                    && this.textBoxTVA != null && this.textBoxTTC != null)
+                if (this.textBoxNumD != null && this.textBoxDateF != null && this.textBoxTTC != null)
                 {
                     int cf = Int32.Parse(this.textBoxNumF.Text);
                     int nd = Int32.Parse(this.textBoxNumD.Text);
                     string df = Convert.ToString(this.dateTimePickerF.Text);
-                    double ttc = Convert.ToDouble(this.textBoxTTC.Text);
-                    double tva = facture.calculTVA(Convert.ToDouble(this.textBoxTTC.Text));
-                    double ht = facture.calculHT(Convert.ToDouble(this.textBoxTTC.Text), tva);
+                    string ttc = this.textBoxTTC.Text;
 
-                    string req = "update Facture Set idDevis= " + nd + ", DateFacture='" + df + "', TotalHT= " + ht + ", TVA= " + tva + ", TotalTTC=" + ttc + " where NumFacture =" + cf + ";";
+                    string req = "update Facture Set idDevis= " + nd + ", DateFacture='" + df + "', TotalTTC=" + ttc + " where NumFacture =" + cf + ";";
                     gestionBdd.request_action(req);
                     dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
 
                     MessageBox.Show("Facture Modifiée!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     refresh_textboxs();
+
+                    calcul_textboxs();
 
                     this.buttonModif.Text = "mod";
 
@@ -209,12 +222,6 @@ namespace GestionMaxiTour
         {
             this.Close();
         }
-
-        /*public afficherImprevus()
-        {
-            foreach (Imprevus unimprevus in facture.ListeImprevus){ assignedToColumn.Items.Add(unimprevus);}
-        }*/
-
 
 
     }

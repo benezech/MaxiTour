@@ -9,13 +9,15 @@ namespace MaxiTour
     public class TourneePrevi
     {
         #region GetSet
-        public bool Etat { get; private set; }
+        public int Id { get; private set; }
+        public string Etat { get; private set; }
         public double Duree { get; private set; }
         public string IntituleLiaison { get; private set; }
-        public string TypeLiaison { get; private set; }
         public string Depart { get; private set; }
-        public string Destination { get; private set; }
-        public double Frequence { get; private set; }
+        public string Arrivee { get; private set; }
+        public int Frequence { get; private set; }
+        public int Periodicite { get; private set; }
+        public int NparJour { get; private set; }
         #endregion
 
         #region List
@@ -24,15 +26,22 @@ namespace MaxiTour
         #endregion
 
         #region Constructeur
-        public TourneePrevi(bool etat, double duree, string intituleLiaison, string typeLiaison , string depart, string destination, double frequence)
+        public TourneePrevi(int id, string etat, double duree, string intituleLiaison,  string depart, string arrivee, int frequence, int periodicite, int nparjour)
         {
+            Id = id;
             Etat = etat;
             Duree = duree;
             IntituleLiaison = intituleLiaison;
-            TypeLiaison = typeLiaison;
             Depart = depart;
-            Destination = destination;
+            Arrivee = arrivee;
             Frequence = frequence;
+            Periodicite = periodicite;
+            NparJour = nparjour;
+        }
+
+         public TourneePrevi()
+        {
+
         }
 
 

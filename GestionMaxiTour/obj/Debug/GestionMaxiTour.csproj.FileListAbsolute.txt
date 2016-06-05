@@ -10,7 +10,6 @@ C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\G
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormChauffeur.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormClient.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormFacture.resources
-C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeAdministratif.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeCamions.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeChauffeur.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeClients.resources
@@ -28,3 +27,5 @@ C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\G
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormDevis.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormImprevu.resources
 C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeDevis.resources
+C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormTournee.resources
+C:\Users\Eric-PC\Desktop\epsi B2\PROJETS\projet groupe c_sharp\gestion version\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormListeTournees.resources
