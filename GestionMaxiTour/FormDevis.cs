@@ -57,6 +57,12 @@ namespace GestionMaxiTour
             datedebut_tb.Text = gestionBdd.getField_Datable(donnees, position, 15);
             datefin_tb.Text = gestionBdd.getField_Datable(donnees, position, 16);
 
+            double kmc = Convert.ToDouble(this.kmclient_tb.Text);
+            double kma = Convert.ToDouble(this.kmallee_tb.Text);
+            double kmr = Convert.ToDouble(this.kmretour_tb.Text);
+
+            totalkm_tb.Text = devis.kmTotal(kmc, kma, kmr).ToString();
+
             string etat = gestionBdd.getField_Datable(donnees, position, 2);
 
             if (etat == "check")
