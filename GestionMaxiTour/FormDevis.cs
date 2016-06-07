@@ -63,6 +63,21 @@ namespace GestionMaxiTour
 
             totalkm_tb.Text = devis.kmTotal(kmc, kma, kmr).ToString();
 
+            // prixaukm_tb.Text = sousTotalPrixKm();
+
+            // prixvehicule_tb.Text = sousTotalPrixVehicule();
+
+            // prixchauffeur_tb.Text = sousTotalPrixChauffeur();
+
+            double total = Convert.ToDouble(this.prixaukm_tb.Text) + Convert.ToDouble(this.prixvehicule_tb.Text) + Convert.ToDouble(this.prixchauffeur_tb.Text);
+
+            total_tb.Text = total.ToString();
+
+
+
+
+
+
             string etat = gestionBdd.getField_Datable(donnees, position, 2);
 
             if (etat == "check")

@@ -387,6 +387,7 @@
             this.total_tb.Name = "total_tb";
             this.total_tb.Size = new System.Drawing.Size(100, 20);
             this.total_tb.TabIndex = 31;
+            this.total_tb.Text = " ";
             // 
             // prixvehicule_tb
             // 

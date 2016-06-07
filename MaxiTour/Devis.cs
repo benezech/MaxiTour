@@ -112,8 +112,9 @@ namespace MaxiTour
 
         public double sousTotalPrixChauffeur()
         {
+
             double total;
-            double SalaireChauffeur = 0;
+            double SalaireChauffeur = ;
             total = SalaireChauffeur + FraisEmploye;
             /* salaireEmployé + frai employé */
 
