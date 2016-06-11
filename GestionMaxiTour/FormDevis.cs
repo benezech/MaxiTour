@@ -69,9 +69,9 @@ namespace GestionMaxiTour
 
             // prixchauffeur_tb.Text = sousTotalPrixChauffeur();
 
-            double total = Convert.ToDouble(this.prixaukm_tb.Text) + Convert.ToDouble(this.prixvehicule_tb.Text) + Convert.ToDouble(this.prixchauffeur_tb.Text);
+            //double total = Convert.ToDouble(this.prixaukm_tb.Text) + Convert.ToDouble(this.prixvehicule_tb.Text) + Convert.ToDouble(this.prixchauffeur_tb.Text);
 
-            total_tb.Text = total.ToString();
+            //total_tb.Text = total.ToString();
 
 
 

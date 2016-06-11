@@ -114,7 +114,7 @@ namespace MaxiTour
         {
 
             double total;
-            double SalaireChauffeur = ;
+            double SalaireChauffeur = 0;
             total = SalaireChauffeur + FraisEmploye;
             /* salaireEmployé + frai employé */
 
