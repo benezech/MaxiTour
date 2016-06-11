@@ -39,16 +39,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.intitul_tb = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.depart_tb = new System.Windows.Forms.TextBox();
-            this.arrivee_tb = new System.Windows.Forms.TextBox();
-            this.frequence_tb = new System.Windows.Forms.TextBox();
-            this.period_tb = new System.Windows.Forms.TextBox();
-            this.nombrej_tb = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.duree_tb = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.nombrej_tb = new System.Windows.Forms.TextBox();
+            this.period_tb = new System.Windows.Forms.TextBox();
+            this.frequence_tb = new System.Windows.Forms.TextBox();
+            this.arrivee_tb = new System.Windows.Forms.TextBox();
+            this.depart_tb = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.checkBoxE = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.buttonDebut = new System.Windows.Forms.Button();
@@ -61,9 +63,17 @@
             this.btn_tournee = new System.Windows.Forms.Button();
             this.buttonFermer = new System.Windows.Forms.Button();
             this.buttonModif = new System.Windows.Forms.Button();
-            this.duree_tb = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.btn_gestion = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dataGridChauffeur = new System.Windows.Forms.DataGridView();
+            this.dataGridCamion = new System.Windows.Forms.DataGridView();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridChauffeur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCamion)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -153,6 +163,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.duree_tb);
             this.groupBox1.Controls.Add(this.label9);
@@ -167,72 +180,35 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(237, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(349, 236);
+            this.groupBox1.Size = new System.Drawing.Size(417, 236);
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Détails";
             // 
-            // label5
+            // label11
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Adresse Départ";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(12, 210);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Durée";
             // 
-            // label6
+            // duree_tb
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Adresse arrivée";
+            this.duree_tb.Location = new System.Drawing.Point(92, 210);
+            this.duree_tb.Name = "duree_tb";
+            this.duree_tb.Size = new System.Drawing.Size(100, 20);
+            this.duree_tb.TabIndex = 10;
             // 
-            // depart_tb
+            // label9
             // 
-            this.depart_tb.Location = new System.Drawing.Point(92, 34);
-            this.depart_tb.Name = "depart_tb";
-            this.depart_tb.Size = new System.Drawing.Size(238, 20);
-            this.depart_tb.TabIndex = 2;
-            // 
-            // arrivee_tb
-            // 
-            this.arrivee_tb.Location = new System.Drawing.Point(93, 71);
-            this.arrivee_tb.Name = "arrivee_tb";
-            this.arrivee_tb.Size = new System.Drawing.Size(237, 20);
-            this.arrivee_tb.TabIndex = 3;
-            // 
-            // frequence_tb
-            // 
-            this.frequence_tb.Location = new System.Drawing.Point(93, 98);
-            this.frequence_tb.Name = "frequence_tb";
-            this.frequence_tb.Size = new System.Drawing.Size(100, 20);
-            this.frequence_tb.TabIndex = 4;
-            // 
-            // period_tb
-            // 
-            this.period_tb.Location = new System.Drawing.Point(93, 133);
-            this.period_tb.Name = "period_tb";
-            this.period_tb.Size = new System.Drawing.Size(100, 20);
-            this.period_tb.TabIndex = 5;
-            // 
-            // nombrej_tb
-            // 
-            this.nombrej_tb.Location = new System.Drawing.Point(93, 170);
-            this.nombrej_tb.Name = "nombrej_tb";
-            this.nombrej_tb.Size = new System.Drawing.Size(100, 20);
-            this.nombrej_tb.TabIndex = 6;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 104);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Fréquence";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(199, 173);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "fois par jour";
             // 
             // label8
             // 
@@ -243,14 +219,67 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Periodicité";
             // 
-            // label9
+            // label7
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(199, 173);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(61, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "fois par jour";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 104);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Fréquence";
+            // 
+            // nombrej_tb
+            // 
+            this.nombrej_tb.Location = new System.Drawing.Point(93, 170);
+            this.nombrej_tb.Name = "nombrej_tb";
+            this.nombrej_tb.Size = new System.Drawing.Size(100, 20);
+            this.nombrej_tb.TabIndex = 6;
+            // 
+            // period_tb
+            // 
+            this.period_tb.Location = new System.Drawing.Point(93, 133);
+            this.period_tb.Name = "period_tb";
+            this.period_tb.Size = new System.Drawing.Size(167, 20);
+            this.period_tb.TabIndex = 5;
+            // 
+            // frequence_tb
+            // 
+            this.frequence_tb.Location = new System.Drawing.Point(93, 98);
+            this.frequence_tb.Name = "frequence_tb";
+            this.frequence_tb.Size = new System.Drawing.Size(100, 20);
+            this.frequence_tb.TabIndex = 4;
+            // 
+            // arrivee_tb
+            // 
+            this.arrivee_tb.Location = new System.Drawing.Point(93, 71);
+            this.arrivee_tb.Name = "arrivee_tb";
+            this.arrivee_tb.Size = new System.Drawing.Size(237, 20);
+            this.arrivee_tb.TabIndex = 3;
+            // 
+            // depart_tb
+            // 
+            this.depart_tb.Location = new System.Drawing.Point(92, 34);
+            this.depart_tb.Name = "depart_tb";
+            this.depart_tb.Size = new System.Drawing.Size(238, 20);
+            this.depart_tb.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 70);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Adresse arrivée";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(6, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Adresse Départ";
             // 
             // checkBoxE
             // 
@@ -342,17 +371,17 @@
             // 
             // btn_tournee
             // 
-            this.btn_tournee.Location = new System.Drawing.Point(352, 265);
+            this.btn_tournee.Location = new System.Drawing.Point(377, 265);
             this.btn_tournee.Name = "btn_tournee";
             this.btn_tournee.Size = new System.Drawing.Size(104, 23);
             this.btn_tournee.TabIndex = 20;
-            this.btn_tournee.Text = "liste de tournées";
+            this.btn_tournee.Text = "liste des tournées";
             this.btn_tournee.UseVisualStyleBackColor = true;
             this.btn_tournee.Click += new System.EventHandler(this.btn_tournee_Click);
             // 
             // buttonFermer
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(491, 265);
+            this.buttonFermer.Location = new System.Drawing.Point(294, 459);
             this.buttonFermer.Name = "buttonFermer";
             this.buttonFermer.Size = new System.Drawing.Size(75, 23);
             this.buttonFermer.TabIndex = 21;
@@ -370,27 +399,89 @@
             this.buttonModif.UseVisualStyleBackColor = true;
             this.buttonModif.Click += new System.EventHandler(this.buttonModif_Click);
             // 
-            // duree_tb
+            // btn_gestion
             // 
-            this.duree_tb.Location = new System.Drawing.Point(92, 210);
-            this.duree_tb.Name = "duree_tb";
-            this.duree_tb.Size = new System.Drawing.Size(100, 20);
-            this.duree_tb.TabIndex = 10;
+            this.btn_gestion.Location = new System.Drawing.Point(550, 265);
+            this.btn_gestion.Name = "btn_gestion";
+            this.btn_gestion.Size = new System.Drawing.Size(104, 23);
+            this.btn_gestion.TabIndex = 24;
+            this.btn_gestion.Text = "Gestion";
+            this.btn_gestion.UseVisualStyleBackColor = true;
+            this.btn_gestion.Click += new System.EventHandler(this.btn_gestion_Click);
             // 
-            // label11
+            // label12
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(12, 210);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Durée";
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(117, 307);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(111, 13);
+            this.label12.TabIndex = 27;
+            this.label12.Text = "Chauffeur(s) affecté(s)";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(454, 307);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(100, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Camion(s) affecté(s)";
+            // 
+            // dataGridChauffeur
+            // 
+            this.dataGridChauffeur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridChauffeur.Location = new System.Drawing.Point(12, 334);
+            this.dataGridChauffeur.Name = "dataGridChauffeur";
+            this.dataGridChauffeur.ReadOnly = true;
+            this.dataGridChauffeur.Size = new System.Drawing.Size(302, 95);
+            this.dataGridChauffeur.TabIndex = 29;
+            // 
+            // dataGridCamion
+            // 
+            this.dataGridCamion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridCamion.Location = new System.Drawing.Point(352, 334);
+            this.dataGridCamion.Name = "dataGridCamion";
+            this.dataGridCamion.ReadOnly = true;
+            this.dataGridCamion.Size = new System.Drawing.Size(302, 95);
+            this.dataGridCamion.TabIndex = 30;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(199, 101);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(147, 13);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "Nombre de jours par semaine ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(198, 217);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 13);
+            this.label15.TabIndex = 13;
+            this.label15.Text = "Semaines";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(267, 136);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(106, 13);
+            this.label16.TabIndex = 14;
+            this.label16.Text = "Jour(s) de la semaine";
             // 
             // FormTournee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 300);
+            this.ClientSize = new System.Drawing.Size(674, 494);
+            this.Controls.Add(this.dataGridCamion);
+            this.Controls.Add(this.dataGridChauffeur);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.btn_gestion);
             this.Controls.Add(this.buttonModif);
             this.Controls.Add(this.buttonFermer);
             this.Controls.Add(this.btn_tournee);
@@ -415,10 +506,12 @@
             this.Controls.Add(this.id_tb);
             this.Controls.Add(this.label1);
             this.Name = "FormTournee";
-            this.Text = "FormTournee";
+            this.Text = "Tournée";
             this.Load += new System.EventHandler(this.FormTournee_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridChauffeur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridCamion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,5 +554,13 @@
         private System.Windows.Forms.Button buttonModif;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox duree_tb;
+        private System.Windows.Forms.Button btn_gestion;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DataGridView dataGridChauffeur;
+        private System.Windows.Forms.DataGridView dataGridCamion;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
     }
 }

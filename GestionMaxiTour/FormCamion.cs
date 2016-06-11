@@ -147,7 +147,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from camion").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Camion").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -264,7 +264,7 @@ namespace GestionMaxiTour
                 string hauint = this.hautint_tb.Text;
 
 
-                string req = "update Camion Set EtatCamion='" + etat + "', Immatriculation='" + imat + "', Kilometrage= " + km + ", Modele= '" + mo + "', Marque= '" + ma + "', Consommation= " + conso + ", Carburant= '" + carbu + "', DateAchat= '" + da + "', DateCirculation= '" + dc + "', Hayon= '" + hayon + "', PoidVide=" + pv + ", PTAC=" + ptac + ", LongueurIntRem=" + loint + ", LargeurIntRem=" + laint + ", HauteurIntRem= " + hauint + " where idCamion= " + idCamion + ";";
+                string req = "update Camion Set EtatCamion='" + etat + "', Immatriculation='" + imat + "', Kilometrage= " + km + ", Modele= '" + mo + "', Marque= '" + ma + "', Consommation= '" + conso + "', Carburant= '" + carbu + "', DateAchat= '" + da + "', DateCirculation= '" + dc + "', Hayon= '" + hayon + "', PoidVide=" + pv + ", PTAC=" + ptac + ", LongueurIntRem=" + loint + ", LargeurIntRem=" + laint + ", HauteurIntRem= " + hauint + " where idCamion= " + idCamion + ";";
 
                 gestionBdd.request_action(req);
 

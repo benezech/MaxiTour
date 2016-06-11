@@ -14,6 +14,7 @@ namespace MaxiTour
         #region List
         
         public List<Camion> ListeCamion { get; private set; }
+
         #endregion
 
         #region Constructeur

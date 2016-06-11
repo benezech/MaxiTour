@@ -35,7 +35,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxImp = new System.Windows.Forms.ComboBox();
             this.textBoxNumF = new System.Windows.Forms.TextBox();
             this.textBoxDateF = new System.Windows.Forms.TextBox();
             this.textBoxNumD = new System.Windows.Forms.TextBox();
@@ -55,7 +54,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.imprevus_btn = new System.Windows.Forms.Button();
+            this.dataGridImprevus = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFacture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridImprevus)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,16 +90,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 178);
+            this.label4.Location = new System.Drawing.Point(572, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 13);
+            this.label4.Size = new System.Drawing.Size(130, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Imprévus";
+            this.label4.Text = "Imprévus lié(s) à la facture";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 211);
+            this.label5.Location = new System.Drawing.Point(26, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
@@ -106,7 +108,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 241);
+            this.label6.Location = new System.Drawing.Point(26, 215);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(28, 13);
             this.label6.TabIndex = 5;
@@ -115,38 +117,30 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 279);
+            this.label7.Location = new System.Drawing.Point(26, 253);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Total TTC";
             // 
-            // comboBoxImp
-            // 
-            this.comboBoxImp.FormattingEnabled = true;
-            this.comboBoxImp.Location = new System.Drawing.Point(105, 175);
-            this.comboBoxImp.Name = "comboBoxImp";
-            this.comboBoxImp.Size = new System.Drawing.Size(258, 21);
-            this.comboBoxImp.TabIndex = 7;
-            // 
             // textBoxNumF
             // 
             this.textBoxNumF.Enabled = false;
-            this.textBoxNumF.Location = new System.Drawing.Point(104, 28);
+            this.textBoxNumF.Location = new System.Drawing.Point(110, 28);
             this.textBoxNumF.Name = "textBoxNumF";
             this.textBoxNumF.Size = new System.Drawing.Size(259, 20);
             this.textBoxNumF.TabIndex = 8;
             // 
             // textBoxDateF
             // 
-            this.textBoxDateF.Location = new System.Drawing.Point(104, 59);
+            this.textBoxDateF.Location = new System.Drawing.Point(110, 59);
             this.textBoxDateF.Name = "textBoxDateF";
             this.textBoxDateF.Size = new System.Drawing.Size(259, 20);
             this.textBoxDateF.TabIndex = 9;
             // 
             // textBoxNumD
             // 
-            this.textBoxNumD.Location = new System.Drawing.Point(105, 136);
+            this.textBoxNumD.Location = new System.Drawing.Point(110, 136);
             this.textBoxNumD.Name = "textBoxNumD";
             this.textBoxNumD.Size = new System.Drawing.Size(258, 20);
             this.textBoxNumD.TabIndex = 10;
@@ -154,7 +148,7 @@
             // textBoxHT
             // 
             this.textBoxHT.Enabled = false;
-            this.textBoxHT.Location = new System.Drawing.Point(105, 211);
+            this.textBoxHT.Location = new System.Drawing.Point(110, 185);
             this.textBoxHT.Name = "textBoxHT";
             this.textBoxHT.Size = new System.Drawing.Size(258, 20);
             this.textBoxHT.TabIndex = 11;
@@ -162,21 +156,21 @@
             // textBoxTVA
             // 
             this.textBoxTVA.Enabled = false;
-            this.textBoxTVA.Location = new System.Drawing.Point(105, 241);
+            this.textBoxTVA.Location = new System.Drawing.Point(110, 215);
             this.textBoxTVA.Name = "textBoxTVA";
             this.textBoxTVA.Size = new System.Drawing.Size(258, 20);
             this.textBoxTVA.TabIndex = 12;
             // 
             // textBoxTTC
             // 
-            this.textBoxTTC.Location = new System.Drawing.Point(105, 272);
+            this.textBoxTTC.Location = new System.Drawing.Point(110, 246);
             this.textBoxTTC.Name = "textBoxTTC";
             this.textBoxTTC.Size = new System.Drawing.Size(258, 20);
             this.textBoxTTC.TabIndex = 13;
             // 
             // dateTimePickerF
             // 
-            this.dateTimePickerF.Location = new System.Drawing.Point(105, 98);
+            this.dateTimePickerF.Location = new System.Drawing.Point(110, 98);
             this.dateTimePickerF.Name = "dateTimePickerF";
             this.dateTimePickerF.Size = new System.Drawing.Size(259, 20);
             this.dateTimePickerF.TabIndex = 14;
@@ -185,15 +179,15 @@
             // 
             this.dataGridFacture.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridFacture.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dataGridFacture.Location = new System.Drawing.Point(410, 27);
+            this.dataGridFacture.Location = new System.Drawing.Point(415, 28);
             this.dataGridFacture.Name = "dataGridFacture";
             this.dataGridFacture.ReadOnly = true;
-            this.dataGridFacture.Size = new System.Drawing.Size(444, 308);
+            this.dataGridFacture.Size = new System.Drawing.Size(444, 237);
             this.dataGridFacture.TabIndex = 15;
             // 
             // buttonDebut
             // 
-            this.buttonDebut.Location = new System.Drawing.Point(19, 315);
+            this.buttonDebut.Location = new System.Drawing.Point(29, 319);
             this.buttonDebut.Name = "buttonDebut";
             this.buttonDebut.Size = new System.Drawing.Size(37, 23);
             this.buttonDebut.TabIndex = 16;
@@ -203,7 +197,7 @@
             // 
             // buttonPrecedent
             // 
-            this.buttonPrecedent.Location = new System.Drawing.Point(62, 315);
+            this.buttonPrecedent.Location = new System.Drawing.Point(72, 319);
             this.buttonPrecedent.Name = "buttonPrecedent";
             this.buttonPrecedent.Size = new System.Drawing.Size(37, 23);
             this.buttonPrecedent.TabIndex = 17;
@@ -213,7 +207,7 @@
             // 
             // buttonSuivant
             // 
-            this.buttonSuivant.Location = new System.Drawing.Point(104, 315);
+            this.buttonSuivant.Location = new System.Drawing.Point(114, 319);
             this.buttonSuivant.Name = "buttonSuivant";
             this.buttonSuivant.Size = new System.Drawing.Size(37, 23);
             this.buttonSuivant.TabIndex = 18;
@@ -223,7 +217,7 @@
             // 
             // buttonFin
             // 
-            this.buttonFin.Location = new System.Drawing.Point(147, 315);
+            this.buttonFin.Location = new System.Drawing.Point(157, 319);
             this.buttonFin.Name = "buttonFin";
             this.buttonFin.Size = new System.Drawing.Size(37, 23);
             this.buttonFin.TabIndex = 19;
@@ -233,7 +227,7 @@
             // 
             // buttonAjout
             // 
-            this.buttonAjout.Location = new System.Drawing.Point(219, 315);
+            this.buttonAjout.Location = new System.Drawing.Point(229, 319);
             this.buttonAjout.Name = "buttonAjout";
             this.buttonAjout.Size = new System.Drawing.Size(44, 23);
             this.buttonAjout.TabIndex = 20;
@@ -243,7 +237,7 @@
             // 
             // buttonSupprim
             // 
-            this.buttonSupprim.Location = new System.Drawing.Point(269, 315);
+            this.buttonSupprim.Location = new System.Drawing.Point(279, 319);
             this.buttonSupprim.Name = "buttonSupprim";
             this.buttonSupprim.Size = new System.Drawing.Size(44, 23);
             this.buttonSupprim.TabIndex = 21;
@@ -253,7 +247,7 @@
             // 
             // buttonModif
             // 
-            this.buttonModif.Location = new System.Drawing.Point(319, 315);
+            this.buttonModif.Location = new System.Drawing.Point(329, 319);
             this.buttonModif.Name = "buttonModif";
             this.buttonModif.Size = new System.Drawing.Size(44, 23);
             this.buttonModif.TabIndex = 22;
@@ -263,9 +257,9 @@
             // 
             // buttonFermer
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(171, 365);
+            this.buttonFermer.Location = new System.Drawing.Point(229, 391);
             this.buttonFermer.Name = "buttonFermer";
-            this.buttonFermer.Size = new System.Drawing.Size(75, 23);
+            this.buttonFermer.Size = new System.Drawing.Size(144, 23);
             this.buttonFermer.TabIndex = 23;
             this.buttonFermer.Text = "fermer";
             this.buttonFermer.UseVisualStyleBackColor = true;
@@ -274,7 +268,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(370, 218);
+            this.label8.Location = new System.Drawing.Point(375, 192);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(34, 13);
             this.label8.TabIndex = 24;
@@ -283,7 +277,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(370, 248);
+            this.label9.Location = new System.Drawing.Point(375, 222);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(34, 13);
             this.label9.TabIndex = 25;
@@ -292,17 +286,37 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(370, 278);
+            this.label10.Location = new System.Drawing.Point(375, 252);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 13);
             this.label10.TabIndex = 26;
             this.label10.Text = "Euros";
             // 
+            // imprevus_btn
+            // 
+            this.imprevus_btn.Location = new System.Drawing.Point(29, 391);
+            this.imprevus_btn.Name = "imprevus_btn";
+            this.imprevus_btn.Size = new System.Drawing.Size(165, 23);
+            this.imprevus_btn.TabIndex = 27;
+            this.imprevus_btn.Text = "ajouter un imprévus";
+            this.imprevus_btn.UseVisualStyleBackColor = true;
+            this.imprevus_btn.Click += new System.EventHandler(this.imprevus_btn_Click);
+            // 
+            // dataGridImprevus
+            // 
+            this.dataGridImprevus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridImprevus.Location = new System.Drawing.Point(415, 315);
+            this.dataGridImprevus.Name = "dataGridImprevus";
+            this.dataGridImprevus.Size = new System.Drawing.Size(439, 150);
+            this.dataGridImprevus.TabIndex = 28;
+            // 
             // FormFacture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(866, 409);
+            this.ClientSize = new System.Drawing.Size(866, 492);
+            this.Controls.Add(this.dataGridImprevus);
+            this.Controls.Add(this.imprevus_btn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -322,7 +336,6 @@
             this.Controls.Add(this.textBoxNumD);
             this.Controls.Add(this.textBoxDateF);
             this.Controls.Add(this.textBoxNumF);
-            this.Controls.Add(this.comboBoxImp);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -334,6 +347,7 @@
             this.Text = "Facture";
             this.Load += new System.EventHandler(this.FormFacture_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridFacture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridImprevus)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,7 +362,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxImp;
         private System.Windows.Forms.TextBox textBoxNumF;
         private System.Windows.Forms.TextBox textBoxDateF;
         private System.Windows.Forms.TextBox textBoxNumD;
@@ -368,6 +381,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button imprevus_btn;
+        private System.Windows.Forms.DataGridView dataGridImprevus;
 
     }
 }

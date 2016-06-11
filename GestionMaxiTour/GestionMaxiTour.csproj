@@ -139,6 +139,12 @@
       <DependentUpon>FormTournee.cs</DependentUpon>
     </Compile>
     <Compile Include="GestionBDD.cs" />
+    <Compile Include="FormGestionTournee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionTournee.Designer.cs">
+      <DependentUpon>FormGestionTournee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCamion.resx">
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTournee.resx">
       <DependentUpon>FormTournee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionTournee.resx">
+      <DependentUpon>FormGestionTournee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

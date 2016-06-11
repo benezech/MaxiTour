@@ -19,7 +19,6 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Facture facture = new Facture();
-        string requestFacture = "SELECT * FROM  Facture";
 
         int position= 0;
         
@@ -33,11 +32,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridFacture.DataSource = gestionBdd.request_select(requestFacture);
-
-            comboBoxImp.DataSource = gestionBdd.request_select("select TypeImprevus from Imprevus");
-            comboBoxImp.DisplayMember = "TypeImprevus";
-
+            dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
             refresh_textboxs();
 
@@ -46,12 +41,16 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select(requestFacture);
+            DataTable donnees = gestionBdd.request_select("select * from Facture");
 
             textBoxNumF.Text = gestionBdd.getField_Datable(donnees, position, 0);
             textBoxNumD.Text = gestionBdd.getField_Datable(donnees, position, 1);
             textBoxDateF.Text = gestionBdd.getField_Datable(donnees, position, 2);
             textBoxTTC.Text = gestionBdd.getField_Datable(donnees, position, 3);
+
+            string id = gestionBdd.getField_Datable(donnees, position, 0);
+
+            dataGridImprevus.DataSource = gestionBdd.request_select("SELECT TypeImprevus, Cout FROM Imprevus where Imprevus.NumFacture=" + id );
 
 
         }
@@ -90,7 +89,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestFacture).Rows.Count - 1)
+            if (position < gestionBdd.request_select("select * from Facture").Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -103,7 +102,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select(requestFacture).Rows.Count - 1;
+            position = gestionBdd.request_select("select * from Facture").Rows.Count - 1;
 
             refresh_textboxs();
 
@@ -112,7 +111,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestFacture).Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Facture").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -143,7 +142,7 @@ namespace GestionMaxiTour
 
                     string req = "Insert into Facture Values ( null, " + nd + ",'" + df + "'," + ttc + ");";
                     gestionBdd.request_action(req);
-                    dataGridFacture.DataSource = gestionBdd.request_select(requestFacture);
+                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
 
                     MessageBox.Show("Facture Ajoutée!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -175,7 +174,7 @@ namespace GestionMaxiTour
 
                 string req = "Delete from Facture Where NumFacture = " + nf + ";";
                 gestionBdd.request_action(req);
-                dataGridFacture.DataSource = gestionBdd.request_select(requestFacture);
+                dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
 
                 position = 0;
 
@@ -201,7 +200,7 @@ namespace GestionMaxiTour
 
                     string req = "update Facture Set idDevis= " + nd + ", DateFacture='" + df + "', TotalTTC=" + ttc + " where NumFacture =" + cf + ";";
                     gestionBdd.request_action(req);
-                    dataGridFacture.DataSource = gestionBdd.request_select(requestFacture);
+                    dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM facture");
 
                     MessageBox.Show("Facture Modifiée!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -222,6 +221,12 @@ namespace GestionMaxiTour
         private void buttonFermer_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void imprevus_btn_Click(object sender, EventArgs e)
+        {
+            FormImprevu imprevus = new FormImprevu();
+            imprevus.ShowDialog(); 
         }
 
 

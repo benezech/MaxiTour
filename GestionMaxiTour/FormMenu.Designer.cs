@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tourneeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.factureTSMI = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,7 +37,6 @@
             this.clientTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.chauffeurTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.camionTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +52,7 @@
             this.camionTSMI});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(452, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(497, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -106,21 +106,12 @@
             this.camionTSMI.Text = "Camion";
             this.camionTSMI.Click += new System.EventHandler(this.camionTSMI_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(158, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bienvenue sur MaxiTour";
-            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 125);
-            this.Controls.Add(this.label1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(497, 316);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMenu";
@@ -139,7 +130,6 @@
         private System.Windows.Forms.ToolStripMenuItem factureTSMI;
         private System.Windows.Forms.ToolStripMenuItem tourneeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devisTSMI;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem imprevusTSMI;
         private System.Windows.Forms.ToolStripMenuItem clientTSMI;
         private System.Windows.Forms.ToolStripMenuItem chauffeurTSMI;

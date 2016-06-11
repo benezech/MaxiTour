@@ -18,7 +18,6 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Chauffeur chauffeur = new Chauffeur();
-        string requestChauffeur = "SELECT * FROM Chauffeur";
 
         int position = 0;
 
@@ -31,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridChauffeur.DataSource = gestionBdd.request_select(requestChauffeur);
+            dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
 
             refresh_textboxs();
 
@@ -39,7 +38,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select(requestChauffeur);
+            DataTable donnees = gestionBdd.request_select("select * from Chauffeur");
 
             IdChauffeur_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             nom_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -88,7 +87,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestChauffeur).Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Chauffeur").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -99,7 +98,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestChauffeur).Rows.Count - 1)
+            if (position < gestionBdd.request_select("select * from Chauffeur").Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -110,7 +109,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select(requestChauffeur).Rows.Count - 1;
+            position = gestionBdd.request_select("select * from Chauffeur").Rows.Count - 1;
 
             refresh_textboxs();
         }
@@ -154,7 +153,7 @@ namespace GestionMaxiTour
 
                     string req = "Insert into Chauffeur Values ( null, '" + nom + "', '" + prenom + "'," + ns + ", '" + adresse + "', " + cp + ", '" + ville + "', '" + tel + "', '" + email + "', '" + dateE + "', '" + tc + "', " + salaire + "," + heure + ");";
                     gestionBdd.request_action(req);
-                    dataGridChauffeur.DataSource = gestionBdd.request_select(requestChauffeur);
+                    dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
 
                     MessageBox.Show("Chauffeur Ajouté!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -185,7 +184,7 @@ namespace GestionMaxiTour
 
                 string req = "Delete from Chauffeur Where idChauffeur = " + nc + ";";
                 gestionBdd.request_action(req);
-                dataGridChauffeur.DataSource = gestionBdd.request_select(requestChauffeur);
+                dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
 
                 position = 0;
 
@@ -193,7 +192,7 @@ namespace GestionMaxiTour
 
                 this.buttonSupprim.Text = "-";
 
-                MessageBox.Show("Chauffeur Supprimée!", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Chauffeur Supprimé!", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -222,7 +221,7 @@ namespace GestionMaxiTour
 
                     string req = "update Chauffeur set Nom='" + nom + "', Prenom='" + prenom + "', NumSecu=" + ns + ", adresse='" + adresse + "', CP= " + cp + ", Ville='" + ville + "', Telephone='" + tel + "', Email='" + email + "', DateEmbauche='" + dateE + "', TypeContrat='"+ tc + "', Salaire=" + salaire + ", NombreHeure=" + heure + " where idChauffeur=" + id + ";";
                     gestionBdd.request_action(req);
-                    dataGridChauffeur.DataSource = gestionBdd.request_select(requestChauffeur);
+                    dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
 
                     MessageBox.Show("Chauffeur Modifié!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -238,6 +237,14 @@ namespace GestionMaxiTour
         private void salaire_tb_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public TextBox salaireBox
+        {
+            get
+            {
+                return  salaire_tb;
+            }
         }
 
 

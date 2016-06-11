@@ -18,7 +18,6 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Devis devis = new Devis();
-        string requestDevis = "SELECT * FROM Devis";
 
         int position = 0;
 
@@ -31,13 +30,17 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
+            //dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
+
             refresh_textboxs();
+
+            calcul_textboxs();
 
         }
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select(requestDevis);
+            DataTable donnees = gestionBdd.request_select("select * from Devis");
 
             id_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             client_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -46,37 +49,22 @@ namespace GestionMaxiTour
             prixcarburant_tb.Text = gestionBdd.getField_Datable(donnees, position, 4);
             prixmaint_tb.Text = gestionBdd.getField_Datable(donnees, position, 5);
             prixassur_tb.Text = gestionBdd.getField_Datable(donnees, position, 6);
-            fraisemploye_tb.Text = gestionBdd.getField_Datable(donnees, position, 7);
-            calcultaxe_tb.Text = gestionBdd.getField_Datable(donnees, position, 8);
-            ammort_tb.Text = gestionBdd.getField_Datable(donnees, position, 9);
-            ressource_tb.Text = gestionBdd.getField_Datable(donnees, position, 10);
-            kmclient_tb.Text = gestionBdd.getField_Datable(donnees, position, 11);
-            kmallee_tb.Text = gestionBdd.getField_Datable(donnees, position, 12);
-            kmretour_tb.Text = gestionBdd.getField_Datable(donnees, position, 13);
-            volumemarchandise_tb.Text = gestionBdd.getField_Datable(donnees, position, 14);
-            datedebut_tb.Text = gestionBdd.getField_Datable(donnees, position, 15);
-            datefin_tb.Text = gestionBdd.getField_Datable(donnees, position, 16);
+            prixaukm_tb.Text = gestionBdd.getField_Datable(donnees, position, 7);
+            prixvehicule_tb.Text = gestionBdd.getField_Datable(donnees, position, 8);
+            prixchauffeur_tb.Text = gestionBdd.getField_Datable(donnees, position, 9);
+            fraisemploye_tb.Text = gestionBdd.getField_Datable(donnees, position, 10);
+            ammort_tb.Text = gestionBdd.getField_Datable(donnees, position,11);
+            ressource_tb.Text = gestionBdd.getField_Datable(donnees, position, 12);
+            kmclient_tb.Text = gestionBdd.getField_Datable(donnees, position, 13);
+            kmallee_tb.Text = gestionBdd.getField_Datable(donnees, position, 14);
+            kmretour_tb.Text = gestionBdd.getField_Datable(donnees, position, 15);
+            volumemarchandise_tb.Text = gestionBdd.getField_Datable(donnees, position, 16);
+            datedebut_tb.Text = gestionBdd.getField_Datable(donnees, position, 17);
+            datefin_tb.Text = gestionBdd.getField_Datable(donnees, position, 18);
 
-            double kmc = Convert.ToDouble(this.kmclient_tb.Text);
-            double kma = Convert.ToDouble(this.kmallee_tb.Text);
-            double kmr = Convert.ToDouble(this.kmretour_tb.Text);
+            string id = gestionBdd.getField_Datable(donnees, position, 0);
 
-            totalkm_tb.Text = devis.kmTotal(kmc, kma, kmr).ToString();
-
-            // prixaukm_tb.Text = sousTotalPrixKm();
-
-            // prixvehicule_tb.Text = sousTotalPrixVehicule();
-
-            // prixchauffeur_tb.Text = sousTotalPrixChauffeur();
-
-            //double total = Convert.ToDouble(this.prixaukm_tb.Text) + Convert.ToDouble(this.prixvehicule_tb.Text) + Convert.ToDouble(this.prixchauffeur_tb.Text);
-
-            //total_tb.Text = total.ToString();
-
-
-
-
-
+            dataGridTourneePrevi.DataSource = gestionBdd.request_select("SELECT * FROM Tournee where Tournee.idDevis=" + id);
 
             string etat = gestionBdd.getField_Datable(donnees, position, 2);
 
@@ -97,11 +85,14 @@ namespace GestionMaxiTour
         {
 
             id_tb.Text = "numéro automatique";
-            client_tb.Text = "";
             prixpeage_tb.Text = "";
             prixcarburant_tb.Text = "";
+            client_tb.Text = "";
             prixmaint_tb.Text = "";
             prixassur_tb.Text = "";
+            prixaukm_tb.Text = "";
+            prixvehicule_tb.Text = "";
+            prixchauffeur_tb.Text = "";
             fraisemploye_tb.Text = "";
             ammort_tb.Text = "";
             ressource_tb.Text = "";
@@ -112,10 +103,9 @@ namespace GestionMaxiTour
             volumemarchandise_tb.Text = "";
             datedebut_tb.Text = " choisir date au dessus";
             datefin_tb.Text = " choisir date au dessus";
-            prixaukm_tb.Text = "calcul automatique";
-            prixvehicule_tb.Text = "calcul automatique";
-            prixchauffeur_tb.Text = "calcul automatique";
-            calcultaxe_tb.Text = "calcul automatique";
+            prixaukm_tb.Text = "";
+            prixvehicule_tb.Text = "";
+            prixchauffeur_tb.Text = "";
             total_tb.Text = "calcul automatique";
 
 
@@ -139,7 +129,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestDevis).Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Devis").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -152,7 +142,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestDevis).Rows.Count - 1)
+            if (position < gestionBdd.request_select("select * from Devis").Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -165,7 +155,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select(requestDevis).Rows.Count - 1;
+            position = gestionBdd.request_select("select * from Devis").Rows.Count - 1;
 
             refresh_textboxs();
 
@@ -179,29 +169,12 @@ namespace GestionMaxiTour
 
         public void calcul_textboxs()
         {
-
-            double kt = devis.kmTotal(Convert.ToDouble(this.kmclient_tb.Text), Convert.ToDouble(this.kmallee_tb.Text), Convert.ToDouble(this.kmretour_tb.Text));
-            //double pk = devis.prixAuKm();
-            //double pv = prix véhicule;
-            //double pc = prix chauffeur ( faire un foreach jusqu'à chauffeur);
-           //double pt = prix total;
             
+            double kt = devis.kmTotal(Convert.ToDouble(this.kmclient_tb.Text), Convert.ToDouble(this.kmallee_tb.Text), Convert.ToDouble(this.kmretour_tb.Text));
+            double total = Convert.ToDouble(this.prixaukm_tb.Text) + Convert.ToDouble(this.prixvehicule_tb.Text) + Convert.ToDouble(this.prixchauffeur_tb.Text);
            
-            double pk = 3000;
-            double pv = 5000;
-            double pc = 7000;
-            //double ct = 400;
-            double pt = 700;
-            //double kt = 300;
-
-            prixaukm_tb.Text = Convert.ToString(pk);
-            prixvehicule_tb.Text = Convert.ToString(pv);
-            prixchauffeur_tb.Text = Convert.ToString(pc); ;
-            //calcultaxe_tb.Text = Convert.ToString(pc); ;
-            total_tb.Text = Convert.ToString(pt);
             totalkm_tb.Text = Convert.ToString(kt);
-
-        
+            total_tb.Text = Convert.ToString(total);
 
         }
 
@@ -216,22 +189,24 @@ namespace GestionMaxiTour
 
 
            else
-                if (this.client_tb.Text != null &&  this.prixpeage_tb.Text != null && this.prixcarburant_tb.Text != null 
+                if ( this.prixpeage_tb.Text != null && this.prixcarburant_tb.Text != null 
                     && this.prixmaint_tb.Text != null && this.prixassur_tb.Text != null && this.fraisemploye_tb.Text != null 
                     && this.ammort_tb.Text != null && this.ressource_tb.Text!= null && this.kmclient_tb.Text != null
                     && this.kmallee_tb.Text != null && this.prixvehicule_tb.Text != null && this.volumemarchandise_tb.Text != null
-                    && this.datedebut_tb.Text != null && this.datefin_tb.Text != null & this.prixaukm_tb.Text != null
-                    && this.prixaukm_tb.Text != null && this.prixvehicule_tb.Text != null && this.prixchauffeur_tb.Text != null
-                    && this.calcultaxe_tb.Text != null && this.total_tb.Text != null)
+                    && this.datedebut_tb.Text != null && this.datefin_tb.Text != null 
+                    && this.prixaukm_tb.Text != null && this.total_tb.Text != null)
                 {
                     int nc = Int32.Parse(this.client_tb.Text);
+                    //string nc = Convert.ToString(this.cbc.SelectedValue);
                     string etat = Convert.ToString(checkBoxEtat.CheckState);
                     string pp = this.prixpeage_tb.Text;
                     string pc = this.prixcarburant_tb.Text;
                     string pm = this.prixmaint_tb.Text;
                     string pa = this.prixassur_tb.Text;
+                    string pkm = this.prixaukm_tb .Text;
+                    string pv = this.prixvehicule_tb.Text;
+                    string pch = this.prixchauffeur_tb.Text;
                     string fe = this.fraisemploye_tb.Text;
-                    double ct = 2000; //calcultaxe_tb taxe
                     string am = this.ammort_tb.Text;
                     string ress = ressource_tb.Text;
                     string kc = this.kmclient_tb.Text;
@@ -240,9 +215,9 @@ namespace GestionMaxiTour
                     string vm = this.volumemarchandise_tb.Text;
                     string ddebut = Convert.ToString(this.dateTimePickerD.Text);
                     string dfin = Convert.ToString(this.dateTimePickerF.Text);
-                    
 
-                    string req = "Insert into Devis Values ( null," + nc + ",'" + etat + "'," + pp + "," + pc + "," + pm + "," + pa + "," + fe + "," + ct + "," + am + ",'" + ress + "'," + kc + "," + ka + "," + kr + "," + vm + ",'" + ddebut + "','" + dfin + "');";
+
+                    string req = "Insert into Devis Values ( null, " + nc + ", '" + etat + "'," + pp + "," + pch + "," + pm + "," + pa + "," + pkm + "," + pv + "," + pch + "," + fe + "," + am + ",'" + ress + "'," + kc + "," + ka + "," + kr + "," + vm + ",'" + ddebut + "','" + dfin + "');";
                     gestionBdd.request_action(req);
 
                     MessageBox.Show("Devis Ajouté!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -272,6 +247,82 @@ namespace GestionMaxiTour
             FormListeClients flisteclients = new FormListeClients();
             flisteclients.ShowDialog();
 
+        }
+
+        private void buttonModif_Click(object sender, EventArgs e)
+        {                    
+
+                
+            if (  this.prixpeage_tb.Text != null && this.prixcarburant_tb.Text != null 
+                    && this.prixmaint_tb.Text != null && this.prixassur_tb.Text != null && this.fraisemploye_tb.Text != null 
+                    && this.ammort_tb.Text != null && this.ressource_tb.Text!= null && this.kmclient_tb.Text != null
+                    && this.kmallee_tb.Text != null && this.prixvehicule_tb.Text != null && this.volumemarchandise_tb.Text != null
+                    && this.datedebut_tb.Text != null && this.datefin_tb.Text != null && this.prixaukm_tb.Text != null && this.total_tb.Text != null)
+                {
+                    int id = Int32.Parse(this.id_tb.Text);
+                    int nc = Int32.Parse(this.client_tb.Text);
+                    string etat = Convert.ToString(checkBoxEtat.CheckState);
+                    string pp = this.prixpeage_tb.Text;
+                    string pc = this.prixcarburant_tb.Text;
+                    string pm = this.prixmaint_tb.Text;
+                    string pa = this.prixassur_tb.Text;
+                    string pkm = this.prixaukm_tb.Text;
+                    string pv = this.prixvehicule_tb.Text;
+                    string pch = this.prixchauffeur_tb.Text;
+                    string fe = this.fraisemploye_tb.Text;
+                    string am = this.ammort_tb.Text;
+                    string ress = ressource_tb.Text;
+                    string kc = this.kmclient_tb.Text;
+                    string ka = this.kmallee_tb.Text;
+                    string kr = this.kmretour_tb.Text;
+                    string vm = this.volumemarchandise_tb.Text;
+                    string ddebut = Convert.ToString(this.dateTimePickerD.Text);
+                    string dfin = Convert.ToString(this.dateTimePickerF.Text);
+
+
+                    string req = "update Devis set idClient=" + nc + ", Etat='" + etat + "', PrixPeage=" + pp + ", PrixCarburant=" + pc + ", PrixMaintenance=" + pm + ", PrixAssurance=" + pa + ", PrixKm= " + pkm + ", PrixVe= " + pv + ", PrixChauff= " + pch + ", FraisEmploye=" + fe + ", Ammortissement=" + am + ", ResourcesMaterielles='" + ress + "', KmClient=" + kc + ", KmAllee=" + ka + ", KmRetour=" + kr + ", VolumesMarchandises=" + vm + ", DateDebut='" + ddebut + "', DateFin='" + dfin + "' where idDevis=" + id + ";";
+                    gestionBdd.request_action(req);
+
+                    MessageBox.Show("Devis Modifié!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    refresh_textboxs();
+
+                    calcul_textboxs();
+
+                    this.buttonAjout.Text = "mod";
+
+                }
+                else
+                {
+                    MessageBox.Show("Il manque un ou plusieurs champs !", "Alerte!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+        
+        }
+
+        private void buttonSupprim_Click(object sender, EventArgs e)
+        {
+            if (this.buttonSupprim.Text == "-")
+            {
+
+                this.buttonSupprim.Text = "Suppr";
+            }
+
+            else
+            {
+                int nd = Int32.Parse(this.id_tb.Text);
+
+
+                string req = "Delete from Devis Where idDevis = " + nd + ";";
+                gestionBdd.request_action(req);
+
+                position = 0;
+
+                refresh_textboxs();
+
+                this.buttonSupprim.Text = "-";
+
+                MessageBox.Show("Devis Supprimé!", "Suppression", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

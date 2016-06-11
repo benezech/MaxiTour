@@ -12,10 +12,10 @@ namespace MaxiTour
         public List<Tournee> ListeTournee { get; set; }
 
         public Contrat(int id, string etat, double prixPeage, double prixCarburant, double prixMaintenance, double prixAssurance, double salaireEmploye,
-                       double fraisEmploye, double taxe, double ammortissement, string ressourceMateriel,
+                       double fraisEmploye, double ammortissement, string ressourceMateriel,
                        double kmClient, double kmAlle, double kmRetour, double volumeMarchandise, string dateDebut, string dateFin)
             : base(id, etat, prixPeage, prixCarburant, prixMaintenance, prixAssurance, salaireEmploye, fraisEmploye, 
-                   taxe, ammortissement, ressourceMateriel, kmClient, kmAlle, kmRetour, volumeMarchandise, dateDebut, dateFin)
+                   ammortissement, ressourceMateriel, kmClient, kmAlle, kmRetour, volumeMarchandise, dateDebut, dateFin)
         {
             this.ListeFacture = new List<Facture>();
             this.ListeTournee = new List<Tournee>();

@@ -18,7 +18,6 @@ namespace GestionMaxiTour
     {
         GestionBDD gestionBdd = new GestionBDD();
         Tournee tournee = new Tournee();
-        string requestTournee = "SELECT * FROM Tournee";
 
         int position = 0;
 
@@ -37,7 +36,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select(requestTournee);
+            DataTable donnees = gestionBdd.request_select("select * from Tournee");
 
             id_tb.Text = gestionBdd.getField_Datable(donnees, position, 0); // id tournee
             //etat_tb.Text = gestionBdd.getField_Datable(donnees, position, 1); // etat checkbox
@@ -63,6 +62,12 @@ namespace GestionMaxiTour
             {
                 checkBoxE.Checked = false;
             }
+
+            string id = gestionBdd.getField_Datable(donnees, position, 0);
+
+            dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT Nom, Prenom FROM Chauffeur, Gestion_Tournee where Chauffeur.idChauffeur=Gestion_Tournee.idChauffeur and " + id + " =Gestion_Tournee.idTournee");
+
+            dataGridCamion.DataSource = gestionBdd.request_select("SELECT Immatriculation, Modele, Marque FROM Camion, Gestion_Tournee where Camion.idCamion=Gestion_Tournee.idCamion and " + id + " =Gestion_Tournee.idTournee");
 
        }
 
@@ -92,7 +97,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestTournee).Rows.Count && position > 0)
+            if (position < gestionBdd.request_select("select * from Tournee").Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -103,7 +108,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select(requestTournee).Rows.Count - 1)
+            if (position < gestionBdd.request_select("select * from Tournee").Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -114,7 +119,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select(requestTournee).Rows.Count - 1;
+            position = gestionBdd.request_select("select * from Tournee").Rows.Count - 1;
 
             refresh_textboxs();
         }
@@ -143,12 +148,12 @@ namespace GestionMaxiTour
                     string depart = this.depart_tb.Text;
                     string arrivee = this.arrivee_tb.Text ;
                     int freq = Int32.Parse(this.frequence_tb.Text);
-                    int period = Int32.Parse(this.period_tb.Text);
+                    string period = this.period_tb.Text;
                     int nj = Int32.Parse(this.nombrej_tb.Text);
 
 
 
-                    string req = "Insert into Tournee Values ( null, '" + etat + "'," + devis + "," + fact + "," + duree + ", '" + intitul + "', '" + depart + "' , '" + arrivee + "', " + freq + ", " + period + ", " + nj + ");";
+                    string req = "Insert into Tournee Values ( null, '" + etat + "'," + devis + "," + fact + "," + duree + ", '" + intitul + "', '" + depart + "' , '" + arrivee + "', " + freq + ", '" + period + "', " + nj + ");";
 
                     gestionBdd.request_action(req);
 
@@ -181,12 +186,12 @@ namespace GestionMaxiTour
                     string depart = this.depart_tb.Text;
                     string arrivee = this.arrivee_tb.Text;
                     int freq = Int32.Parse(this.frequence_tb.Text);
-                    int period = Int32.Parse(this.period_tb.Text);
+                    string period = this.period_tb.Text;
                     int nj = Int32.Parse(this.nombrej_tb.Text);
 
 
 
-                   string req = "update Tournee set Etat='" + etat + "', idDevis=" + devis + ", NumFacture=" + fact + ", DureeTournee=" + duree + ", IntituleLiaison='" + intitul + "', DepartTournee='" + depart + "' , ArriveeTournee='" + arrivee + "', FrequenceTournee=" + freq + ", PeriodiciteTournee= " + period + ", NombreParJour= " + nj + " where idTournee= " + id + ";";
+                   string req = "update Tournee set Etat='" + etat + "', idDevis=" + devis + ", NumFacture=" + fact + ", DureeTournee=" + duree + ", IntituleLiaison='" + intitul + "', DepartTournee='" + depart + "' , ArriveeTournee='" + arrivee + "', FrequenceTournee=" + freq + ", PeriodiciteTournee= '" + period + "', NombreParJour= " + nj + " where idTournee= " + id + ";";
                     
                    gestionBdd.request_action(req);
 
@@ -251,6 +256,12 @@ namespace GestionMaxiTour
             FormListeFacture listefacture = new FormListeFacture();
             listefacture.ShowDialog(); 
 
+        }
+
+        private void btn_gestion_Click(object sender, EventArgs e)
+        {
+            FormGestionTournee gestion = new FormGestionTournee();
+            gestion.ShowDialog(); 
         }
     }
 }

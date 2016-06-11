@@ -15,7 +15,6 @@ namespace MaxiTour
         public double PrixMaintenance { get; set; }
         public double PrixAssurance { get; set; }
         public double FraisEmploye { get; set; }
-        public double Taxe { get; set; }
         public double Ammortissement { get; set; }
         public string RessourceMateriel { get; set; }
         public double KmClient { get; set; }
@@ -34,7 +33,7 @@ namespace MaxiTour
         #region constructeurs
 
         public Devis(int id, string etat, double prixPeage, double prixCarburant, double prixMaintenance, double prixAssurance, double salaireEmploye, 
-                       double fraisEmploye, double taxe, double ammortissement, string ressourceMateriel,
+                       double fraisEmploye, double ammortissement, string ressourceMateriel,
                        double kmClient, double kmAlle, double kmRetour, double volumeMarchandise, string dateDebut, string dateFin) 
         {
             this.Id = id;
@@ -44,7 +43,6 @@ namespace MaxiTour
             this.PrixMaintenance = prixMaintenance;
             this.PrixAssurance = prixAssurance;
             this.FraisEmploye = fraisEmploye;
-            this.Taxe = taxe;
             this.Ammortissement = ammortissement;
             this.RessourceMateriel = ressourceMateriel;
             this.KmClient = kmClient;
@@ -89,34 +87,24 @@ namespace MaxiTour
             return kmTotal;
         }
 
-       /* public double sousTotalPrixVehicule()
+        public double calculTaxe(double total)
         {
-            double total;
+            double taxe = 0;
 
-            total = PrixMaintenance + PrixPeage + prixAuKm();
+            taxe= (20 * total) / 100;
 
-            return total;
+            return taxe;
 
-        }*/
+        }
 
-        /*public double sousTotalPrixKm()
-        {
-            double total;
 
-            total = (prixAuKm() * KmClient) + PrixPeage;
-            
-
-            return total;
-
-        }*/
 
         public double sousTotalPrixChauffeur()
         {
-
             double total;
             double SalaireChauffeur = 0;
             total = SalaireChauffeur + FraisEmploye;
-            /* salaireEmployé + frai employé */
+          
 
             return total;
 
@@ -135,7 +123,7 @@ namespace MaxiTour
         }*/
 
 
-       /* public double prixAuKm()
+       /*public double prixAuKm( double prixcarburant)
         {
 
             double consoCamion = 0;
@@ -155,7 +143,7 @@ namespace MaxiTour
                     foreach (Camion camion in lca)
                     {
                         // on calcul et additionne la consommation de chaque camion.
-                        consoCamion += (camion.Consommation / 100) * PrixCarburant;
+                        consoCamion += (camion.Consommation / 100) * prixcarburant;
                     }
 
 

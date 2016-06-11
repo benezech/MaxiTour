@@ -55,8 +55,6 @@
             this.groupBoxTotaux = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.checkBoxEtat = new System.Windows.Forms.CheckBox();
-            this.calcultaxe_tb = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.prixchauffeur_tb = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -81,7 +79,6 @@
             this.dateTimePickerF = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerD = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.client_tb = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.prixcarburant_tb = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -90,7 +87,11 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.btn_listeclients = new System.Windows.Forms.Button();
+            this.client_tb = new System.Windows.Forms.TextBox();
+            this.dataGridTourneePrevi = new System.Windows.Forms.DataGridView();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBoxTotaux.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTourneePrevi)).BeginInit();
             this.SuspendLayout();
             // 
             // labelid
@@ -291,8 +292,6 @@
             // 
             this.groupBoxTotaux.Controls.Add(this.label15);
             this.groupBoxTotaux.Controls.Add(this.checkBoxEtat);
-            this.groupBoxTotaux.Controls.Add(this.calcultaxe_tb);
-            this.groupBoxTotaux.Controls.Add(this.label11);
             this.groupBoxTotaux.Controls.Add(this.prixchauffeur_tb);
             this.groupBoxTotaux.Controls.Add(this.label14);
             this.groupBoxTotaux.Controls.Add(this.label13);
@@ -312,7 +311,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(23, 334);
+            this.label15.Location = new System.Drawing.Point(23, 319);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(86, 13);
             this.label15.TabIndex = 63;
@@ -321,33 +320,15 @@
             // checkBoxEtat
             // 
             this.checkBoxEtat.AutoSize = true;
-            this.checkBoxEtat.Location = new System.Drawing.Point(126, 334);
+            this.checkBoxEtat.Location = new System.Drawing.Point(126, 319);
             this.checkBoxEtat.Name = "checkBoxEtat";
             this.checkBoxEtat.Size = new System.Drawing.Size(55, 17);
             this.checkBoxEtat.TabIndex = 61;
             this.checkBoxEtat.Text = "Validé";
             this.checkBoxEtat.UseVisualStyleBackColor = true;
             // 
-            // calcultaxe_tb
-            // 
-            this.calcultaxe_tb.Enabled = false;
-            this.calcultaxe_tb.Location = new System.Drawing.Point(126, 234);
-            this.calcultaxe_tb.Name = "calcultaxe_tb";
-            this.calcultaxe_tb.Size = new System.Drawing.Size(100, 20);
-            this.calcultaxe_tb.TabIndex = 39;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 241);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 13);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "Calcul Taxe";
-            // 
             // prixchauffeur_tb
             // 
-            this.prixchauffeur_tb.Enabled = false;
             this.prixchauffeur_tb.Location = new System.Drawing.Point(126, 166);
             this.prixchauffeur_tb.Name = "prixchauffeur_tb";
             this.prixchauffeur_tb.Size = new System.Drawing.Size(100, 20);
@@ -374,7 +355,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(23, 298);
+            this.label12.Location = new System.Drawing.Point(23, 251);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(40, 13);
             this.label12.TabIndex = 34;
@@ -383,15 +364,13 @@
             // total_tb
             // 
             this.total_tb.Enabled = false;
-            this.total_tb.Location = new System.Drawing.Point(126, 295);
+            this.total_tb.Location = new System.Drawing.Point(126, 248);
             this.total_tb.Name = "total_tb";
             this.total_tb.Size = new System.Drawing.Size(100, 20);
             this.total_tb.TabIndex = 31;
-            this.total_tb.Text = " ";
             // 
             // prixvehicule_tb
             // 
-            this.prixvehicule_tb.Enabled = false;
             this.prixvehicule_tb.Location = new System.Drawing.Point(126, 129);
             this.prixvehicule_tb.Name = "prixvehicule_tb";
             this.prixvehicule_tb.Size = new System.Drawing.Size(100, 20);
@@ -399,7 +378,6 @@
             // 
             // prixaukm_tb
             // 
-            this.prixaukm_tb.Enabled = false;
             this.prixaukm_tb.Location = new System.Drawing.Point(126, 60);
             this.prixaukm_tb.Name = "prixaukm_tb";
             this.prixaukm_tb.Size = new System.Drawing.Size(100, 20);
@@ -472,6 +450,7 @@
             this.buttonSupprim.TabIndex = 37;
             this.buttonSupprim.Text = "-";
             this.buttonSupprim.UseVisualStyleBackColor = true;
+            this.buttonSupprim.Click += new System.EventHandler(this.buttonSupprim_Click);
             // 
             // buttonModif
             // 
@@ -481,6 +460,7 @@
             this.buttonModif.TabIndex = 38;
             this.buttonModif.Text = "mod";
             this.buttonModif.UseVisualStyleBackColor = true;
+            this.buttonModif.Click += new System.EventHandler(this.buttonModif_Click);
             // 
             // btn_listedevis
             // 
@@ -494,7 +474,7 @@
             // 
             // buttonFermer
             // 
-            this.buttonFermer.Location = new System.Drawing.Point(684, 424);
+            this.buttonFermer.Location = new System.Drawing.Point(1077, 424);
             this.buttonFermer.Name = "buttonFermer";
             this.buttonFermer.Size = new System.Drawing.Size(83, 23);
             this.buttonFermer.TabIndex = 40;
@@ -556,13 +536,6 @@
             this.label16.Size = new System.Drawing.Size(73, 13);
             this.label16.TabIndex = 49;
             this.label16.Text = "Numéro Client";
-            // 
-            // client_tb
-            // 
-            this.client_tb.Location = new System.Drawing.Point(150, 56);
-            this.client_tb.Name = "client_tb";
-            this.client_tb.Size = new System.Drawing.Size(120, 20);
-            this.client_tb.TabIndex = 50;
             // 
             // label17
             // 
@@ -627,19 +600,46 @@
             // 
             // btn_listeclients
             // 
-            this.btn_listeclients.Location = new System.Drawing.Point(152, 101);
+            this.btn_listeclients.Location = new System.Drawing.Point(150, 101);
             this.btn_listeclients.Name = "btn_listeclients";
-            this.btn_listeclients.Size = new System.Drawing.Size(116, 23);
+            this.btn_listeclients.Size = new System.Drawing.Size(121, 23);
             this.btn_listeclients.TabIndex = 60;
             this.btn_listeclients.Text = "Voir liste des clients";
             this.btn_listeclients.UseVisualStyleBackColor = true;
             this.btn_listeclients.Click += new System.EventHandler(this.btn_listeclients_Click);
             // 
+            // client_tb
+            // 
+            this.client_tb.Location = new System.Drawing.Point(148, 56);
+            this.client_tb.Name = "client_tb";
+            this.client_tb.Size = new System.Drawing.Size(123, 20);
+            this.client_tb.TabIndex = 62;
+            // 
+            // dataGridTourneePrevi
+            // 
+            this.dataGridTourneePrevi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTourneePrevi.Location = new System.Drawing.Point(861, 51);
+            this.dataGridTourneePrevi.Name = "dataGridTourneePrevi";
+            this.dataGridTourneePrevi.Size = new System.Drawing.Size(461, 348);
+            this.dataGridTourneePrevi.TabIndex = 63;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(993, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(199, 13);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Tournée(s) Prévisionnelles de références";
+            // 
             // FormDevis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(893, 460);
+            this.ClientSize = new System.Drawing.Size(1343, 460);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dataGridTourneePrevi);
+            this.Controls.Add(this.client_tb);
             this.Controls.Add(this.btn_listeclients);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label21);
@@ -648,7 +648,6 @@
             this.Controls.Add(this.label18);
             this.Controls.Add(this.prixcarburant_tb);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.client_tb);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.dateTimePickerD);
             this.Controls.Add(this.dateTimePickerF);
@@ -695,6 +694,7 @@
             this.Load += new System.EventHandler(this.FormSaisirDevis_Load);
             this.groupBoxTotaux.ResumeLayout(false);
             this.groupBoxTotaux.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTourneePrevi)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -751,9 +751,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerF;
         private System.Windows.Forms.DateTimePicker dateTimePickerD;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox client_tb;
-        private System.Windows.Forms.TextBox calcultaxe_tb;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox prixcarburant_tb;
         private System.Windows.Forms.Label label18;
@@ -764,5 +761,8 @@
         private System.Windows.Forms.Button btn_listeclients;
         private System.Windows.Forms.CheckBox checkBoxEtat;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox client_tb;
+        private System.Windows.Forms.DataGridView dataGridTourneePrevi;
+        private System.Windows.Forms.Label label11;
     }
 }
