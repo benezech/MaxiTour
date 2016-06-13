@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Imprevus camion = new Imprevus();
 
+        //string requeteImprevus = "SELECT * FROM imprevus";
+        string requeteImprevus = "SELECT * FROM Imprevus";
         public FormListeImprevu()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridImprevus.DataSource = gestionBdd.request_select("SELECT * FROM Imprevus");
+            dataGridImprevus.DataSource = gestionBdd.request_select(requeteImprevus);
         }
     }
 }

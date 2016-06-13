@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Client client = new Client();
 
+        //string requeteClient = "Select * from client";
+        string requeteClient = "Select * from Client";
         int position = 0;
 
         public FormClient()
@@ -30,7 +32,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridClient.DataSource = gestionBdd.request_select("SELECT * FROM Client");
+            dataGridClient.DataSource = gestionBdd.request_select(requeteClient);
 
             refresh_textboxs();
 
@@ -38,7 +40,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from Client");
+            DataTable donnees = gestionBdd.request_select(requeteClient);
 
             IdClient_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             nom_tb.Text = gestionBdd.getField_Datable(donnees, position, 1);
@@ -81,7 +83,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Client").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select(requeteClient).Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -93,7 +95,7 @@ namespace GestionMaxiTour
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
             
-            if (position < gestionBdd.request_select("select * from Client").Rows.Count - 1)
+            if (position < gestionBdd.request_select(requeteClient).Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -104,7 +106,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from Client").Rows.Count - 1;
+            position = gestionBdd.request_select(requeteClient).Rows.Count - 1;
 
             refresh_textboxs();
         }
@@ -147,7 +149,7 @@ namespace GestionMaxiTour
 
                     string req = "Insert into Client Values ( null, '" + nom + "', '" + prenom + "'," + ns + ", '" + adresse + "', " + cp + ",'" + ville + "','" + tel + "', '" + email + "', '" + rs + "', " + siret + ",'" + coden + "');";
                     gestionBdd.request_action(req);
-                    dataGridClient.DataSource = gestionBdd.request_select("SELECT * FROM Client");
+                    dataGridClient.DataSource = gestionBdd.request_select(requeteClient);
 
                     MessageBox.Show("Client Ajouté!", "Ajout", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -178,7 +180,7 @@ namespace GestionMaxiTour
 
                 string req = "Delete from Client Where idClient = " + nc + ";";
                 gestionBdd.request_action(req);
-                dataGridClient.DataSource = gestionBdd.request_select("SELECT * FROM Client");
+                dataGridClient.DataSource = gestionBdd.request_select(requeteClient);
 
                 position = 0;
 
@@ -216,7 +218,7 @@ namespace GestionMaxiTour
 
                     string req = "update Client Set Nom= '" + nom + "', Prenom= '" + prenom + "', NumSecu=" + ns + ", adresse='" + adresse + "', CP=" + cp + ", Ville='" + ville + "', Telephone='" + tel + "', Email= '" + email + "', RaisonSociale='" + rs + "', Siret=" + siret + ", CodeNaf='" + coden + "' where idClient =" + id + ";";
                     gestionBdd.request_action(req);
-                    dataGridClient.DataSource = gestionBdd.request_select("SELECT * FROM client");
+                    dataGridClient.DataSource = gestionBdd.request_select(requeteClient);
 
                     MessageBox.Show("Client Modifié!", "Modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

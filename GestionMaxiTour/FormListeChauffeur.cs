@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Chauffeur facture = new Chauffeur();
 
+        //string requeteChauffeur = "Select * from chauffeur";
+        string requeteChauffeur = "Select * from Chauffeur";
         public FormListeChauffeur()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM Chauffeur");
+            dataGridChauffeur.DataSource = gestionBdd.request_select("SELECT * FROM requeteChauffeur");
         }
     }
 }

@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Facture facture = new Facture();
 
+        //string requeteFacture = "SELECT * FROM facture";
+        string requeteFacture = "SELECT * FROM Facture";
         public FormListeFacture()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridFacture.DataSource = gestionBdd.request_select("SELECT * FROM Facture");
+            dataGridFacture.DataSource = gestionBdd.request_select(requeteFacture);
         }
     }
 }

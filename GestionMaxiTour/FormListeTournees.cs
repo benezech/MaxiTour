@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Tournee camion = new Tournee();
 
+        //string requeteTournee = "Select * from tournee";
+        string requeteTournee = "Select * from Tournee";
         public FormListeTournees()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridTournee.DataSource = gestionBdd.request_select("SELECT * FROM Tournee");
+            dataGridTournee.DataSource = gestionBdd.request_select(requeteTournee);
         }
     }
 }

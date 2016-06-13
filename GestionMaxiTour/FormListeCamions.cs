@@ -20,6 +20,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Camion camion = new Camion();
 
+        //string requeteCamion = "Select * from camion";
+        string requeteCamion = "Select * from Camion";
         public FormListeCamions()
         {
             InitializeComponent();
@@ -29,7 +31,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridCamion.DataSource = gestionBdd.request_select("SELECT * FROM Camion");
+            dataGridCamion.DataSource = gestionBdd.request_select(requeteCamion);
         }
     }
 }

@@ -56,3 +56,4 @@ C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj
 C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.FormGestionTournee.resources
 C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.Properties.Resources.resources
 C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\obj\Debug\GestionMaxiTour.csproj.GenerateResource.Cache
+C:\Users\gael\Documents\Visual Studio 2015\Projects\MaxiTour\GestionMaxiTour\bin\Debug\MySql.Data.dll

@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Camion camion = new Camion();
 
+        //string requeteCamion = "Select * from camion";
+        string requeteCamion = "Select * from Camion";
         int position = 0;
 
         public FormCamion()
@@ -38,7 +40,7 @@ namespace GestionMaxiTour
 
         public void refresh_textboxs()
         {
-            DataTable donnees = gestionBdd.request_select("select * from Camion");
+            DataTable donnees = gestionBdd.request_select(requeteCamion);
 
             idCamion_tb.Text = gestionBdd.getField_Datable(donnees, position, 0);
             //nom_tb.Text = gestionBdd.getField_Datable(donnees, position, 1); // etat checkbox
@@ -147,7 +149,7 @@ namespace GestionMaxiTour
 
         private void buttonPrecedent_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Camion").Rows.Count && position > 0)
+            if (position < gestionBdd.request_select(requeteCamion).Rows.Count && position > 0)
             {
                 position = position - 1;
 
@@ -160,7 +162,7 @@ namespace GestionMaxiTour
 
         private void buttonSuivant_Click(object sender, EventArgs e)
         {
-            if (position < gestionBdd.request_select("select * from Camion").Rows.Count - 1)
+            if (position < gestionBdd.request_select(requeteCamion).Rows.Count - 1)
             {
                 position = position + 1;
 
@@ -173,7 +175,7 @@ namespace GestionMaxiTour
 
         private void buttonFin_Click(object sender, EventArgs e)
         {
-            position = gestionBdd.request_select("select * from Camion").Rows.Count - 1;
+            position = gestionBdd.request_select(requeteCamion).Rows.Count - 1;
 
             refresh_textboxs();
 

@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Client client = new Client();
 
+        //string requeteClient = "Select * from client";
+        string requeteClient = "Select * from Client";
         public FormListeClients()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridListeClients.DataSource = gestionBdd.request_select("SELECT * FROM Client");
+            dataGridListeClients.DataSource = gestionBdd.request_select(requeteClient);
 
         }
     }

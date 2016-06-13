@@ -26,10 +26,10 @@ namespace GestionMaxiTour
         public void Connexion()
         {
             /*server = "localhost";
-            database = "maxitour8";
+            database = "maxitourperso";
             uid = "root";
             string connectionString;
-            connectionString = "SERVER=" + server + ";" + "DATABASE=" +
+            connectionString = "SERVER=" + server + "; Port = 81;" + "DATABASE =" +
             database + ";" + "UID=" + uid + ";";*/
 
             server = "mysql.montpellier.epsi.fr";

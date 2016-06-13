@@ -19,6 +19,8 @@ namespace GestionMaxiTour
         GestionBDD gestionBdd = new GestionBDD();
         Devis devis = new Devis();
 
+        //string requeteDevis = "Select * from devis";
+        string requeteDevis = "Select * from Devis";
         public FormListeDevis()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace GestionMaxiTour
         {
             gestionBdd.Connexion();
 
-            dataGridDevis.DataSource = gestionBdd.request_select("SELECT * FROM Devis");
+            dataGridDevis.DataSource = gestionBdd.request_select(requeteDevis);
 
         }
     }
